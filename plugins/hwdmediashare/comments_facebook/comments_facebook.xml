@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="hwdmediashare" version="3.0" method="upgrade">
+	<name>plg_hwdmediashare_comments_facebook</name>
+	<author>HWD</author>
+	<creationDate>2016-04-21</creationDate>
+	<copyright>(C) 2014 Highwood Design Limited</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@hwdmediashare.co.uk</authorEmail>
+	<authorUrl>http://hwdmediashare.co.uk</authorUrl>
+	<version>2.0.5</version> 
+	<description>PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="comments_facebook">comments_facebook.php</filename>
+		<filename>language/en-GB/en-GB.plg_hwdmediashare_comments_facebook.sys.ini</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_hwdmediashare_comments_facebook.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_hwdmediashare_comments_facebook.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                                <field 
+                                        name="loadsdk" 
+                                        type="radio" 
+					label="PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_FIELD_LOADSDK_LABEL"
+					description="PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_FIELD_LOADSDK_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default="1" 
+				>
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+				</field>   
+                                <field 
+                                        name="colorscheme" 
+                                        type="list"
+					label="PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_FIELD_COLORSCHEME_LABEL"
+					description="PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_FIELD_COLORSCHEME_DESC"
+                                        default="light" 
+				>
+                                        <option value="light">PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_OPTION_LIGHT</option>
+                                        <option value="dark">PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_OPTION_DARK</option>
+				</field> 
+				<field 
+                                        name="num_posts" 
+                                        type="text"
+					label="PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_FIELD_NUM_POSTS_LABEL"
+					description="PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_FIELD_NUM_POSTS_DESC"
+					default="5"
+				/>
+                                <field 
+                                        name="order_by" 
+                                        type="list"
+					label="PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_FIELD_ORDER_BY_LABEL"
+					description="PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_FIELD_ORDER_BY_DESC"
+                                        default="social" 
+				>
+                                        <option value="social">PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_OPTION_SOCIAL</option>
+                                        <option value="reverse_time">PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_OPTION_REVERSE_TIME</option>
+                                        <option value="time">PLG_HWDMEDIASHARE_COMMENTS_FACEBOOK_OPTION_TIME</option>
+				</field> 
+			</fieldset>
+		</fields>
+	</config>
+</extension>

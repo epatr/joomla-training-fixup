@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<form>
+ 
+<fields name="params">
+ 
+	<fieldset name="items_params" label="TPL_GROUP_EXTRA_FIELDS_LABEL" description="TPL_GROUP_EXTRA_FIELDS_LABEL_DESC">
+     
+      <field
+		          name="maingrid"
+		          type="list"
+		          global="2"
+		          default="2"
+		          label="TPL_MAIN_NUMBER_GRID_LABEL"
+		          description="TPL_MAIN_NUMBER_GRID_DESC" >        
+		          <option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+		  </field>
+	</fieldset>
+ 
+</fields>
+ 
+</form>

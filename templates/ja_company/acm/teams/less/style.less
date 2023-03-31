@@ -1,0 +1,64 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// -------------------------------
+// TEAMS STYLE
+// -------------------------------
+.acm-teams {
+  .style-1 {
+    overflow: hidden;
+
+    &.team-items {
+      .clearfix();
+      
+      .row {
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .item {
+      margin-bottom: @t3-global-margin * 2;
+
+      // Member image
+      .member-image { 
+        margin-bottom: @t3-global-margin;
+        overflow: hidden;
+        text-align: center;
+
+        img {
+          display: inline-block;
+        }
+      }
+
+      // Member name
+      h4 {
+        font-size: @font-size-base;
+        font-weight: @font-weight-bold;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      // Member title
+      .member-title {
+        color: @gray-light;
+        font-size: @font-size-small;
+        font-weight: @font-weight-light;
+        text-align: center;
+      }
+
+      // Member description
+      .member-desc {
+        text-align: center;
+      }
+    }
+  }
+}

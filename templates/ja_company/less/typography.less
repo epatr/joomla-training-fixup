@@ -1,0 +1,776 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+ 
+
+// --------------------------------------------------
+// CORE TYPOGRAPHY (type.less)
+// Headings
+// --------------------------------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+  line-height: @headings-line-height;
+  color: @headings-color;
+
+  small,
+  .small {
+    font-weight: normal;
+    line-height: 1;
+    color: @headings-small-color;
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: @line-height-computed;
+  margin-bottom: (@line-height-computed / 2);
+
+  small,
+  .small {
+    font-size: 65%;
+  }
+}
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: (@line-height-computed / 2);
+  margin-bottom: (@line-height-computed / 2);
+
+  small,
+  .small {
+    font-size: 75%;
+  }
+}
+
+h1, .h1 { font-size: @font-size-h1; }
+h2, .h2 { font-size: @font-size-h2; }
+h3, .h3 { font-size: @font-size-h3; }
+h4, .h4 { font-size: @font-size-h4; }
+h5, .h5 { font-size: @font-size-h5; }
+h6, .h6 { font-size: @font-size-h6; }
+
+
+// Body text
+// -------------------------
+
+// Paragraphs
+// ----------
+p {
+  margin: 0 0 (@line-height-computed / 2);
+}
+
+.lead {
+  margin-bottom: @line-height-computed;
+  font-size: floor((@font-size-base * 1.15));
+  font-weight: 200;
+  line-height: 1.4;
+
+  @media (min-width: @screen-sm-min) {
+    font-size: (@font-size-base * 1.5);
+  }
+}
+
+// Color Swatches
+// ----------------
+.example-colors {
+  .swatch-item {
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    background: @gray-dark;
+    color: @white;
+    margin-bottom: @t3-global-margin;
+
+    @media (min-width: @screen-lg) {
+      min-height: 123px;
+    }
+
+    dl {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      padding: 20px;
+      margin: 0;
+    }
+  }
+  // The colors
+  .color-brand-primary {
+    background: @brand-primary;
+  }
+  .color-brand-secondary {
+    background: @brand-secondary;
+  }
+  .color-brand-success {
+    background: @brand-success;
+  }
+  .color-brand-danger {
+    background: @brand-danger;
+  }
+  .color-brand-warning {
+    background: @brand-warning;
+  }
+  .color-brand-info {
+    background: @brand-info;
+  }
+  // TGrayscale Levels
+  .color-gray-darker {
+    background: @gray-darker;
+  }
+  .color-gray-dark {
+    background: @gray-dark;
+  }
+  .color-gray {
+    background: @gray;
+  }
+  .color-gray-light {
+    background: @gray-light;
+    color: @gray-dark;
+  }
+  .color-gray-lighter {
+    background: @gray-lighter;
+    color: @gray-dark;
+  }
+  .color-gray-lightest {
+    background: @gray-lightest;
+    color: @gray-dark;
+  }
+}
+
+.docs-section {
+  margin-bottom: @t3-global-margin * 2;
+
+  @media (max-width: @screen-xs-max) {
+    margin-bottom: @t3-global-margin;
+  }
+
+  .btn {
+    margin-bottom: @t3-global-margin / 2;
+  }
+}
+
+h2.sub-title {
+  font-size: @font-size-h2;
+  margin: @t3-global-margin 0;
+}
+
+
+
+// Emphasis & misc
+// ---------------
+
+// Ex: 14px base font * 85% = about 12px
+small, .small   { font-size: 85%; }
+
+// Undo browser default styling
+cite    { font-style: normal; }
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+
+// Contextual colors
+.text-muted {
+  color: @text-muted;
+}
+.text-primary {
+  .text-emphasis-variant(@brand-primary);
+}
+.text-success {
+  .text-emphasis-variant(@state-success-text);
+}
+.text-info {
+  .text-emphasis-variant(@state-info-text);
+}
+.text-warning {
+  .text-emphasis-variant(@state-warning-text);
+}
+.text-danger {
+  .text-emphasis-variant(@state-danger-text);
+}
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-primary {
+  // Given the contrast here, this is the only class to have its color inverted
+  // automatically.
+  color: #fff;
+  .bg-variant(@brand-primary);
+}
+.bg-success {
+  .bg-variant(@state-success-bg);
+}
+.bg-info {
+  .bg-variant(@state-info-bg);
+}
+.bg-warning {
+  .bg-variant(@state-warning-bg);
+}
+.bg-danger {
+  .bg-variant(@state-danger-bg);
+}
+
+// Highlight
+.highlight {
+  background-color: #FFC;
+  font-weight: bold;
+  padding: 1px 4px;
+}
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding-bottom: ((@line-height-computed / 2) - 1);
+  margin: (@line-height-computed * 2) 0 @line-height-computed;
+  border-bottom: 1px solid @page-header-border-color;
+}
+
+
+// Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+// ----------------------------
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: (@line-height-computed / 2);
+  ul,
+  ol{
+    margin-bottom: 0;
+  }
+}
+
+// List options
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  .list-unstyled();
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// Description Lists
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: @line-height-computed;
+}
+
+dt,
+dd {
+  line-height: @line-height-base;
+}
+
+dt {
+  font-weight: normal;
+}
+
+dd {
+  margin-left: 0; // Undo browser default
+}
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+@media (min-width: @grid-float-breakpoint) {
+  .dl-horizontal {
+    dt {
+      float: left;
+      width: (@component-offset-horizontal - 20);
+      clear: left;
+      text-align: right;
+      .text-overflow();
+    }
+    dd {
+      margin-left: @component-offset-horizontal;
+      &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
+    }
+  }
+}
+
+
+
+//
+// MISC
+// --------------------------------------------------
+
+// Abbreviations and acronyms
+// --------------------------
+abbr[title],
+// Added data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @abbr-border-color;
+}
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+
+// Blockquotes
+// -----------
+blockquote {
+  padding: (@line-height-computed / 2) @line-height-computed;
+  margin: 0 0 @line-height-computed;
+  font-size: @blockquote-font-size;
+  border-left: 5px solid @blockquote-border-color;
+
+  p,
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Note: Deprecated small and .small as of v3.1.0
+  // Context: https://github.com/twbs/bootstrap/issues/11660
+  footer,
+  small,
+  .small {
+    display: block;
+    font-size: 80%; // back to default font-size
+    line-height: @line-height-base;
+    color: @blockquote-small-color;
+
+    &:before {
+      content: '\2014 \00A0'; // em dash, nbsp
+    }
+  }
+}
+
+// Opposite alignment of blockquote
+//
+// Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid @blockquote-border-color;
+  border-left: 0;
+  text-align: right;
+
+  // Account for citation
+  footer,
+  small,
+  .small {
+    &:before { content: ''; }
+    &:after {
+      content: '\00A0 \2014'; // nbsp, em dash
+    }
+  }
+}
+
+// Quotes
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+// Addresses
+// ---------
+address {
+  margin-bottom: @line-height-computed;
+  font-style: normal;
+  line-height: @line-height-base;
+}
+
+
+
+//
+// CODE (inline and block) (code.less)
+// -----------------------------------
+// Inline and block code styles
+code,
+kbd,
+pre,
+samp {
+  font-family: @font-family-monospace;
+}
+
+// Inline code
+code {
+}
+
+// Blocks of code
+pre {
+}
+
+
+
+//
+// FEATURE LIST
+// --------------------------------------------------
+.btn-actions {
+  text-align: center;
+}
+
+.features-list {
+  margin-top: @t3-global-margin * 3;
+
+  .page-header {
+    border: 0;
+    text-align: center;
+
+    h1 {
+      font-size: @t3-font-size-bigger + 30;
+    }
+  }
+
+  /* Features Rows */
+  .feature-row {
+    overflow: hidden;
+    min-height: 200px;
+    color: #696f72;
+    border-top: 1px solid #e0e2e3;
+    padding: (@t3-global-padding * 3) 0 0;
+	text-align:center;
+
+    &:last-child {
+      border-bottom: 1px solid #e0e2e3;
+      margin-bottom: @t3-global-margin * 3;
+    }
+
+    h3 {
+      font-size: @font-size-base * 2;      
+    }
+
+    div:first-child {
+      padding-left: 0;
+    }
+
+    div:last-child {
+      padding-right: 0;
+    }
+
+    div:first-child.feature-img img {
+      float: left;
+    }
+
+    div:last-child.feature-img img {
+      float: right;
+    }
+  }
+}
+
+
+.jumbotron {
+  h2 {
+    font-size: @t3-font-size-bigger + 30;
+  }
+
+  iframe {
+    margin-top: @t3-global-margin;
+  }
+}
+
+.label-small {
+  color: @brand-secondary;
+  font-size: @font-size-h6;
+  font-family: @font-family-secondary;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+// Responsive video
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Social list
+.social-list {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .clearfix();
+
+  li {
+    display: inline-block;
+    float: left;
+    margin-left: @grid-gutter-width / 4;
+
+    a {
+      background: @gray-light-lv2;
+      border-radius: @border-radius-small;
+      color: @white;
+      display: inline-block;
+      line-height: 24px;
+      text-align: center;
+      height: 24px;
+      width: 24px;
+
+      &:hover,&:focus,&:active {
+        background: @brand-primary;
+      }
+
+      &.facebook:hover {
+        background-color: @facebook-brand;
+      }
+
+      &.twitter:hover {
+        background-color: @twitter-brand;
+      }
+
+      &.instagram:hover {
+        background-color: @instagram-brand;
+      }
+
+      &.google-plus:hover {
+        background-color: @google-plus-brand;
+      }
+    }
+  }
+}
+
+// Contact list
+.address-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .make-row();
+
+  li {
+    display: inline-block;
+    font-size: @font-size-h5;
+    .make-sm-column(4);
+
+    label {
+      color: @gray-light;
+      display: block;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: @font-size-h6;
+    }
+
+    a {
+      border-bottom: 1px solid @brand-secondary;
+    }
+  }
+}
+
+// Box Contact
+.box-contact {
+  border-bottom: 1px solid lighten(@t3-footer-background, 5%);
+  margin-bottom: @grid-gutter-width * 2;
+  padding-bottom: @grid-gutter-width * 2;
+  overflow: hidden;
+
+  // Mobile view
+  @media (max-width: @screen-xs-max) {
+    padding-bottom: @t3-global-padding;
+    margin-bottom: @t3-global-margin;
+  }
+
+  .contact-item {
+    background: darken(@t3-footer-background, 5%);
+    border-radius: @border-radius-base;
+    padding: @t3-global-padding;
+    text-align: center;
+
+    // Tablet view
+    @media (max-width: @screen-md-max) {
+      margin-bottom: @t3-global-margin;
+    }
+
+    // Title
+    h6 {
+      color: @white;
+      text-transform: uppercase;
+    }
+
+    // Description
+    p {
+      font-size: @t3-font-size-smaller; 
+    }
+
+    // Link
+    a {
+      border-bottom: 1px solid @brand-secondary;
+      display: inline-block;
+      color: @white;
+      font-size: @t3-font-size-smaller;
+
+      &:hover,&:focus,&:active {
+        color: @link-hover-color;
+      }
+    }
+  }
+}
+
+// Site Info
+.site-info {
+  h2 {
+    color: @white;
+    font-size: @font-size-h1;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: @t3-font-size-smaller;
+    padding-right: 25%;
+
+    // Mobile view
+    @media (max-width: @screen-xs-max) {
+      padding-right: 0;
+    }
+  }
+}
+
+
+// Simple quote
+// ------------
+.sp-quote {
+
+  .sp-quote-ct {
+    background-color: @gray-lightest;
+    padding: @t3-global-padding;
+    margin-bottom: @t3-global-margin;
+
+    img {
+      border: 3px solid @gray-lighter;
+
+      &[align="right"] {
+        margin: 0 0 @t3-global-margin;
+      }
+    }
+  }
+
+  // desktop view
+  @media (min-width: @screen-md-min) {
+    position: relative;
+    margin: (@t3-global-margin * 2) 0;
+    min-height: 400px;
+
+    & > img {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .sp-quote-ct {
+      background-color: rgba(255,255,255,0.95);
+      float: right;
+      position: relative;
+      margin: (@t3-global-margin * 2);
+      width: 50%;
+
+      img[align="right"] {
+        margin: 0 0 @t3-global-margin @t3-global-margin;
+      }
+    }
+  }
+
+}
+
+// Timeline
+.info-timeline {
+  background-color: @gray-light-max;
+  border: 1px solid @t3-border-color;
+  border-radius: @border-radius-base;
+  color: @gray;
+  padding: @grid-gutter-width * 2 @grid-gutter-width;
+
+  // Tablet view
+  @media (max-width: @screen-sm-max) {
+    padding: @grid-gutter-width;
+  }
+
+  .timeline-title {
+    text-align: center;
+
+    // Mobile view
+    @media (max-width: @screen-xs-max) {
+      text-align: left;
+      margin-bottom: @t3-global-margin;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    span {
+      display: block;
+      font-size: @font-size-h3;
+      text-transform: uppercase;
+    }
+  }
+
+  .timeline-desc {
+    font-weight: 300;
+    .opacity(0.8);
+  }
+}
+
+// Resource
+.resource {
+  margin-top: @t3-global-margin * 2;
+  margin-bottom: @t3-global-margin * 2;
+
+  .box-inner {
+    border: 1px solid lighten(@gray-light, 25%);
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    padding: @t3-global-padding;
+    text-align: center;
+    transition: all 0.25s;
+
+    i {
+      font-size: 48px;
+
+      &.primary { color: @brand-primary; }
+      &.green   { color: @green; }
+      &.blue    { color: @blue; }
+      &.orange  { color: @orange; }
+      &.cyan    { color: @cyan; }
+      &.red     { color: @red; }
+      &.purple  { color: @purple; }
+    }
+
+    h3 {
+      font-size: @font-size-h3;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      background-color: @brand-primary;
+      border-color: @brand-primary;
+      color: @white;
+
+      a {
+        color: @white;
+      }
+    }
+  }
+}

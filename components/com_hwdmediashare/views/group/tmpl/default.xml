@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <layout title="COM_HWDMEDIASHARE_GROUP_VIEW_DEFAULT_TITLE">
+                <message>COM_HWDMEDIASHARE_GROUP_VIEW_DEFAULT_DESC</message>
+        </layout>
+	<fields
+                name="request" 
+                addfieldpath="/administrator/components/com_hwdmediashare/models/fields/"
+        >
+		<fieldset name="request">
+			<field 
+                                name="id" 
+                                type="group"
+				label="COM_HWDMS_GROUP_LABEL"
+                                description="COM_HWDMS_GROUP_DESC"
+				required="true"
+			/>
+		</fieldset>
+	</fields>         
+</metadata>

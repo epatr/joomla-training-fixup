@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="community" version="3.0" method="upgrade">
+	<name>plg_community_media</name>
+	<author>HWD</author>
+	<creationDate>2016-04-21</creationDate>
+	<copyright>(C) 2014 Highwood Design Limited</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@hwdmediashare.co.uk</authorEmail>
+	<authorUrl>http://hwdmediashare.co.uk</authorUrl>
+	<version>2.0.5</version>  
+	<description>PLG_COMMUNITY_MEDIA_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="media">media.php</filename>
+		<filename>language/en-GB/en-GB.plg_community_media.sys.ini</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_community_media.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_community_media.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+                        <fieldset name="basic">
+				<field 
+                                        name="coreapp" 
+                                        type="radio" 
+					label="PLG_COMMUNITY_MEDIA_FIELD_CORE_APPLICATION_LABEL"
+					description="PLG_COMMUNITY_MEDIA_FIELD_CORE_APPLICATION_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default="1"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>  
+                                <field 
+                                        name="position"
+                                        type="list"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_POSITION_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_POSITION_DESC"
+                                        default="content"
+                                >
+                                        <option value="content">PLG_COMMUNITY_MEDIA_OPTION_CONTENT</option>
+                                        <option value="sidebar-top">PLG_COMMUNITY_MEDIA_OPTION_SIDEBARTOP</option>
+                                        <option value="sidebar-bottom">PLG_COMMUNITY_MEDIA_OPTION_SIDEBARBOTTOM</option>
+                                </field>  
+				<field 
+                                        name="count" 
+                                        type="text" 
+					label="PLG_COMMUNITY_MEDIA_FIELD_COUNT_LABEL"
+					description="PLG_COMMUNITY_MEDIA_FIELD_COUNT_DESC" 
+                                        default="5"
+                                />                                                              
+			</fieldset>
+			<fieldset 
+                                name="display"
+				label="PLG_COMMUNITY_MEDIA_FIELDSET_DISPLAY_LABEL"
+			>
+                                <field
+                                        name="list_columns"
+                                        type="list"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_COLUMNS_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_COLUMNS_DESC"
+                                        default=""
+                                >
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                </field>                            
+                                <field
+                                        name="list_meta_title"
+                                        type="radio"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_SHOW_TITLE_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_SHOW_TITLE_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_meta_thumbnail"
+                                        type="radio"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_SHOW_THUMBNAIL_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_SHOW_THUMBNAIL_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_meta_type_icon"
+                                        type="radio"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_SHOW_MEDIA_TYPE_ICON_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_SHOW_MEDIA_TYPE_ICON_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>  
+                                <field
+                                        name="list_meta_duration"
+                                        type="radio"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_SHOW_DURATION_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_SHOW_DURATION_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>                                 
+                                <field
+                                        name="list_meta_description"
+                                        type="radio"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_SHOW_DESCRIPTION_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_SHOW_DESCRIPTION_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field> 
+                                <field
+                                        name="list_meta_category"
+                                        type="radio"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_SHOW_CATEGORY_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_SHOW_CATEGORY_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field> 
+                                <field
+                                        name="list_meta_author"
+                                        type="radio"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_SHOW_AUTHOR_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_SHOW_AUTHOR_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_meta_likes"
+                                        type="radio"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_SHOW_LIKES_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_SHOW_LIKES_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_meta_dislikes"
+                                        type="radio"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_SHOW_DISLIKES_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_SHOW_DISLIKES_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field> 
+                                <field
+                                        name="list_meta_hits"
+                                        type="radio"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_SHOW_VIEWS_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_SHOW_VIEWS_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_meta_created"
+                                        type="radio"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_SHOW_DATE_CREATED_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_SHOW_DATE_CREATED_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>                                                                               
+                                <field 
+                                        name="list_item_heading" 
+                                        type="list" 
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_HEADING_LEVEL_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_HEADING_LEVEL_DESC"
+                                        default=""
+                                >
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                        <option value="1">JH1</option>
+                                        <option value="2">JH2</option>
+                                        <option value="3">JH3</option>
+                                        <option value="4">JH4</option>
+                                        <option value="5">JH5</option>
+                                        <option value="6">JH6</option>
+                                </field>
+                                <field 
+                                        name="list_link_titles" 
+                                        type="radio" 
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_LINKED_TITLES_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_LINKED_TITLES_LABEL"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field 
+                                        name="list_link_thumbnails" 
+                                        type="radio" 
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_LINKED_THUMBNAILS_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_LINKED_THUMBNAILS_LABEL"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_title_truncate"
+                                        type="text"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_TRUNCATE_TITLE_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_TRUNCATE_TITLE_DESC"
+                                        default=""
+                                />
+                                <field
+                                        name="list_desc_truncate"
+                                        type="text"
+                                        label="PLG_COMMUNITY_MEDIA_FIELD_TRUNCATE_DESC_LABEL"
+                                        description="PLG_COMMUNITY_MEDIA_FIELD_TRUNCATE_DESC_DESC"
+                                        default=""
+                                />
+			</fieldset>
+			<fieldset 
+                                name="toolbar"
+				label="PLG_COMMUNITY_MEDIA_FIELDSET_TOOLBAR_LABEL"
+			>
+                                <field 
+                                        name="toolbar_media_menu" 
+                                        type="radio" 
+					label="PLG_COMMUNITY_MEDIA_FIELD_TOOLBAR_MEDIA_LABEL"
+					description="PLG_COMMUNITY_MEDIA_FIELD_TOOLBAR_MEDIA_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default="1"
+                                >
+                                        <option value="1">JSHOW</option>
+                                        <option value="0">JHIDE</option>
+                                </field>
+                                <field 
+                                        name="toolbar_mymedia_menu" 
+                                        type="radio" 
+					label="PLG_COMMUNITY_MEDIA_FIELD_TOOLBAR_MYMEDIA_LABEL"
+					description="PLG_COMMUNITY_MEDIA_FIELD_TOOLBAR_MYMEDIA_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default="1"
+                                >
+                                        <option value="1">JSHOW</option>
+                                        <option value="0">JHIDE</option>
+                                </field>
+                                <field 
+                                        name="toolbar_upload_menu" 
+                                        type="radio" 
+					label="PLG_COMMUNITY_MEDIA_FIELD_TOOLBAR_UPLOAD_LABEL"
+					description="PLG_COMMUNITY_MEDIA_FIELD_TOOLBAR_UPLOAD_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default="1"
+                                >
+                                        <option value="1">JSHOW</option>
+                                        <option value="0">JHIDE</option>
+                                </field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

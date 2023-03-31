@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="1.6.0" type="module" method="upgrade" client="site">
+	<name>ARI Quiz Top Results</name>
+	<creationDate>December 2012</creationDate>
+	<author>ARI Soft</author>
+	<copyright>ARI Soft</copyright>
+	<authorEmail>info@ari-soft.com</authorEmail>
+	<authorUrl>www.ari-soft.com</authorUrl>
+	<version>2.1.1</version>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>MODULE_ARIQUIZTOPRESULT</description>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_ariquiztopresult.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_ariquiztopresult.sys.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_ariquiztopresult">mod_ariquiztopresult.php</filename>
+		<filename>module.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_ariquiz/fields">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_ARIQUIZTOPRESULT_CLASSSUFFIX" description="PARAMMODULECLASSSUFFIX" />
+				<field name="label" type="text" default="" label="MOD_ARIQUIZTOPRESULT_LABEL" description="MOD_ARIQUIZTOPRESULT_DESCR_LABEL" />
+				<field name="count" type="text" default="5" label="MOD_ARIQUIZTOPRESULT_COUNT" description="MOD_ARIQUIZTOPRESULT_DESCR_COUNT" />
+				<field name="categoryId" type="text" default="" label="MOD_ARIQUIZTOPRESULT_CATEGORIES" description="MOD_ARIQUIZTOPRESULT_DESCR_CATEGORIES" />
+				<field name="pointUnit" type="list" default="percent" label="MOD_ARIQUIZTOPRESULT_MEASUREUNIT" description="MOD_ARIQUIZTOPRESULT_DESCR_MEASUREUNIT">
+					<option value="percent">MOD_ARIQUIZTOPRESULT_PERCENT</option> 
+					<option value="point">MOD_ARIQUIZTOPRESULT_POINT</option> 
+				</field>
+				<field name="nameField" type="list" default="username" label="MOD_ARIQUIZTOPRESULT_NAMEFIELD" description="MOD_ARIQUIZTOPRESULT_DESCR_NAMEFIELD">
+					<option value="username">MOD_ARIQUIZTOPRESULT_USERNAME</option>
+					<option value="login">MOD_ARIQUIZTOPRESULT_LOGIN</option>
+				</field>
+				<field name="hideQuizName" type="list" default="0" label="MOD_ARIQUIZTOPRESULT_HIDEQUIZNAME" description="MOD_ARIQUIZTOPRESULT_DESCR_HIDEQUIZNAME">
+					<option value="0">MOD_ARIQUIZTOPRESULT_NO</option> 
+					<option value="1">MOD_ARIQUIZTOPRESULT_YES</option>
+				</field>
+				<field name="showQuizLink" type="list" default="0" label="MOD_ARIQUIZTOPRESULT_SHOWQUIZLINK" description="MOD_ARIQUIZTOPRESULT_DESCR_SHOWQUIZLINK">
+					<option value="0">MOD_ARIQUIZTOPRESULT_NO</option> 
+					<option value="1">MOD_ARIQUIZTOPRESULT_YES</option> 
+				</field>
+				<field name="addMenuItemToLink" type="list" default="0" label="MOD_ARIQUIZTOPRESULT_ADDITEMIDTOLINK" description="MOD_ARIQUIZTOPRESULT_DESCR_ADDITEMIDTOLINK">
+					<option value="0">MOD_ARIQUIZTOPRESULT_NO</option> 
+					<option value="1">MOD_ARIQUIZTOPRESULT_YES</option> 
+				</field>
+				<field name="itemId" type="menuItem" default="" label="MOD_ARIQUIZTOPRESULT_MENUITEM" description="MOD_ARIQUIZTOPRESULT_DESCR_MENUITEM" />
+				<field name="ignoreGuest" type="list" default="1" label="MOD_ARIQUIZTOPRESULT_IGNOREGUEST" description="MOD_ARIQUIZTOPRESULT_DESCR_IGNOREGUEST">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="aggregateResults" type="list" default="1" label="MOD_ARIQUIZTOPRESULT_AGGREGATERESULTS" description="MOD_ARIQUIZTOPRESULT_DESCR_AGGREGATERESULTS">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="aggregateUserResults" type="list" default="0" label="MOD_ARIQUIZTOPRESULT_AGGREGATEUSERRESULTS" description="MOD_ARIQUIZTOPRESULT_DESCR_AGGREGATEUSERRESULTS">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="emptyMessage" type="textarea" rows="3" cols="45" default="" label="MOD_ARIQUIZTOPRESULT_EMPTYMESSAGE" description="MOD_ARIQUIZTOPRESULT_DESCR_EMPTYMESSAGE" />
+				<field name="" type="header" default="MOD_ARIQUIZTOPRESULT_DATEFILTERS" label="" description="" />
+				<field name="time_zone" type="timezones" default="" label="MOD_ARIQUIZTOPRESULT_TIMEZONE" description="MOD_ARIQUIZTOPRESULT_DESCR_TIMEZONE" />
+						
+				<field name="dateFilterType" type="fieldsgroups" default="none" label="MOD_ARIQUIZTOPRESULT_FILTERTYPE" description="">
+					<fieldsgroup id="dateFilterType_none" label="MOD_ARIQUIZTOPRESULT_NONE" />
+		  			<fieldsgroup id="dateFilterType_range" label="MOD_ARIQUIZTOPRESULT_DATERANGE" />
+		  			<fieldsgroup id="dateFilterType_recurrence" label="MOD_ARIQUIZTOPRESULT_RECURRENCE" />
+				</field>
+			</fieldset>
+		</fields>
+		<fields name="extra_params">
+			<fieldset name="dateFilterType_none">
+			</fieldset>
+			<fieldset name="dateFilterType_range">
+				<field name="daterange_start_date" type="calendar" default="" label="MOD_ARIQUIZTOPRESULT_STARTDATE" description="MOD_ARIQUIZTOPRESULT_DESCR_STARTDATE" />
+  				<field name="daterange_end_date" type="calendar" default="" label="MOD_ARIQUIZTOPRESULT_ENDDATE" description="MOD_ARIQUIZTOPRESULT_DESCR_ENDDATE" />
+			</fieldset>
+			<fieldset name="dateFilterType_recurrence">
+				<field name="recurrence_type" type="list" default="month" label="MOD_ARIQUIZTOPRESULT_RECURRENCEPERIOD" description="MOD_ARIQUIZTOPRESULT_DESCR_RECURRENCEPERIOD">
+					<option value="day">MOD_ARIQUIZTOPRESULT_DAY</option>
+					<option value="week">MOD_ARIQUIZTOPRESULT_WEEK</option>
+					<option value="month">MOD_ARIQUIZTOPRESULT_MONTH</option>
+					<option value="year">MOD_ARIQUIZTOPRESULT_YEAR</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

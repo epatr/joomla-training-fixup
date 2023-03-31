@@ -1,0 +1,58 @@
+.ja-accordion ul.ja-accordion-containner li:first-child h3.ja-accordion-title {
+  margin-top: 0;
+}
+.ja-accordion ul.ja-accordion-containner li h3.ja-accordion-title.active {
+  color: #292c35;
+}
+.ja-accordion ul.ja-accordion-containner li h3.ja-accordion-title.active::after {
+  content: "\f207";
+  color: #05a7cf;
+}
+.ja-accordion ul.ja-accordion-containner li h3.ja-accordion-title {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 3px;
+  color: #a2acb3;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 10px;
+  -webkit-box-shadow: 0px 0px 0px 1px #d4d5d6;
+  box-shadow: 0px 0px 0px 1px #d4d5d6;
+}
+.ja-accordion ul.ja-accordion-containner li h3.ja-accordion-title::after {
+  content: "\f359";
+  float: left;
+  display: inline-block;
+  font-family: "Ionicons";
+  font-size: 13px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ja-accordion .ja-accordion-content {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 0px 1px #d4d5d6;
+  box-shadow: 0px 0px 0px 1px #d4d5d6;
+}
+.ja-accordion .ja-accordion-content.active {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.ja-accordion .ja-accordion-content > ul,
+.ja-accordion .ja-accordion-content > div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 0;
+  position: relative;
+}

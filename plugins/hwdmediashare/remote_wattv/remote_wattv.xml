@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="hwdmediashare" version="3.0" method="upgrade">
+	<name>plg_hwdmediashare_remote_wattv</name>
+	<author>HWD</author>
+	<creationDate>2016-04-21</creationDate>
+	<copyright>(C) 2014 Highwood Design Limited</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@hwdmediashare.co.uk</authorEmail>
+	<authorUrl>http://hwdmediashare.co.uk</authorUrl>
+	<version>2.0.5</version> 
+	<description>PLG_HWDMEDIASHARE_REMOTE_WATTV_XML_DESCRIPTION</description>
+	<url>http://wat.tv</url>
+	<files>
+		<filename plugin="remote_wattv">remote_wattv.php</filename>
+		<filename>language/en-GB/en-GB.plg_hwdmediashare_remote_wattv.sys.ini</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_hwdmediashare_remote_wattv.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_hwdmediashare_remote_wattv.sys.ini</language>
+	</languages>
+</extension>

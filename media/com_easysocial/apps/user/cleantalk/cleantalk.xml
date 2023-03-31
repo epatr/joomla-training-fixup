@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<social type="apps" group="user">
+	<name>CleanTalk</name>
+	<element>cleantalk</element>
+	<author>Stack Ideas Sdn Bhd</author>
+	<url>https://stackideas.com</url>
+	<created>Aug 4, 2017</created>
+	<version>2.1.23</version>
+	<copyright>Copyright (C) 2010 - 2017 Stack Ideas Sdn Bhd</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<installable>false</installable>
+	<core>false</core>
+	<widget>false</widget>
+	<system>false</system>
+	<description><![CDATA[APP_USER_CT_DESC]]></description>
+	<files>
+		<folder>config</folder>
+		<folder>libraries</folder>
+		<file>cleantalk.php</file>
+		<file>cleantalk.xml</file>
+		<sql>install.sql</sql>
+	</files>
+	<languages>
+		<language type="en-GB">en-GB.plg_app_user_cleantalk.ini</language>
+	</languages>        
+</social>

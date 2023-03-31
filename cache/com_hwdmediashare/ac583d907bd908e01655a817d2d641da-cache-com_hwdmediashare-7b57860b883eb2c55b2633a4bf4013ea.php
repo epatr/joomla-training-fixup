@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#a:2:{s:6:"result";s:76:"/media/com_hwdmediashare/files/d4/fc/d4/4dd8acac5ffc65b3be3a9e27418896ec.jpg";s:6:"output";s:0:"";}

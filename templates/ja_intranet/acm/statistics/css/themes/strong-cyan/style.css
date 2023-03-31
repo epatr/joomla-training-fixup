@@ -1,0 +1,111 @@
+.section-inner {
+  background-size: cover;
+  background-position: center center;
+}
+.acm-stats .stats-header {
+  margin-bottom: 20px;
+}
+.acm-stats .stats-header .stats-title {
+  margin: 0 0 40px;
+  font-size: 21px;
+  font-weight: 300;
+  color: #333333;
+  line-height: 1.75;
+}
+.acm-stats .stats-header .stats-description {
+  margin-top: 0;
+  font-weight: 300;
+  line-height: 1.53846154;
+}
+.acm-stats .stats-list {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+.acm-stats .stats-list:before,
+.acm-stats .stats-list:after {
+  content: " ";
+  display: table;
+}
+.acm-stats .stats-list:after {
+  clear: both;
+}
+.acm-stats .stats-list li {
+  padding: 0 10px;
+  border-top: 0;
+}
+.acm-stats.style-dark {
+  color: #ffffff;
+}
+.acm-stats.style-dark .stats-title {
+  color: #ffffff;
+}
+.acm-stats.style-dark .stats-subject {
+  color: #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+@media screen and (max-width: 991px) {
+  .acm-stats .container {
+    overflow: hidden;
+  }
+}
+.ie8 .acm-stats .container {
+  width: auto;
+}
+@-webkit-keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.inview .acm-stats .stats-list span.stats-item-counter .progressbar span {
+  -webkit-animation: progressBar 900ms ease 0.15s forwards;
+  -moz-animation: progressBar 900ms ease 0.15s forwards;
+  animation: progressBar 900ms ease 0.15s forwards;
+}
+.acm-stats.style-1 .stats-list .stats-asset {
+  padding: 0;
+  margin-bottom: 40px;
+}
+.acm-stats.style-1 .stats-list .stats-asset:before,
+.acm-stats.style-1 .stats-list .stats-asset:after {
+  content: " ";
+  display: table;
+}
+.acm-stats.style-1 .stats-list .stats-asset:after {
+  clear: both;
+}
+.acm-stats.style-1 .stats-list span {
+  display: block;
+}
+.acm-stats.style-1 .stats-list span.stats-item-counter {
+  color: #000000;
+  padding: 0;
+  background-color: #eeeeee;
+  border-radius: 3px;
+}
+.acm-stats.style-1 .stats-list span.stats-item-counter .progressbar span {
+  background-color: #05a7cf;
+  color: #ffffff;
+  font-size: 12px;
+  height: 8px;
+  border-radius: 3px;
+}
+.acm-stats.style-1 .stats-list span.stats-item-subject {
+  padding-left: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+}

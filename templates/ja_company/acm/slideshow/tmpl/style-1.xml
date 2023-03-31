@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Slideshow Style 1</title>
+  <sampledata>
+ </sampledata>
+  <fields name="slideshow">
+  	<fieldset name="basic-1" label="SLIDESHOW_BASIC_1_LABEL" description="SLIDESHOW_BASIC_DESC">
+  		<field name="mask" type="list" default="1" label="SLIDESHOW_MASK_TITLE" description="SLIDESHOW_MASK_DES">
+  			<option value="0">JNO</option>
+  			<option value="1">JYES</option>
+  		</field>
+
+  		<field name="auto-play" type="list" default="1" label="SLIDESHOW_AUTO_PLAY_TITLE" description="SLIDESHOW_AUTO_PLAY_DES">
+  			<option value="0">JNO</option>
+  			<option value="1">JYES</option>
+  		</field>
+  	</fieldset>
+
+    <fieldset name="basic-3" label="SLIDESHOW_ACTION_LABEL" description="SLIDESHOW_ACTION_DESC">
+      <field name="title-action" type="textarea" default="" label="SLIDESHOW_ACTION_TITLE" description="SLIDESHOW_ACTION_DES" />
+      <field name="image-video" type="media" default="1" label="SLIDESHOW_IMAGE_INTRO_VIDEO_TITLE" description="SLIDESHOW_IMAGE_INTRO_VIDEO_DES"/>
+      <field name="link-video" type="text" default="1" label="SLIDESHOW_MASK_TITLE" description="SLIDESHOW_MASK_DES" />
+    </fieldset>
+
+		<fieldset name="basic-2" label="SLIDESHOW_BASIC_2_LABEL" description="SLIDESHOW_BASIC_DESC" multiple="1">
+			<field name="image" type="media" default="" label="SLIDESHOW_IMG_TITLE" description="SLIDESHOW_IMG_DES"></field>
+
+			<field name="animation" type="list" default="left-right" label="SLIDESHOW_ANIMATION_TITLE" description="SLIDESHOW_ANIMATION_DES">
+				<option value="0">JNO</option>
+  			<option value="left-right">Left to right</option>
+  			<option value="bottom-top">Bottom To Top</option>
+  		</field>
+			
+			<field name="group" type="text" default="" label="SLIDESHOW_GROUP" description="SLIDESHOW_GROUP_DES"></field>
+
+			<field name="title" type="text" default="" label="SLIDESHOW_TITLE" description="SLIDESHOW_TITLE_DES"></field>
+
+			<field name="desc" type="textarea" default="" label="SLIDESHOW_DESCRIPTIONS" description="SLIDESHOW_DESCRIPTIONS_DES"></field>
+
+			<field name="button1" type="text" default="" label="SLIDESHOW_BUTTON_1" description="SLIDESHOW_BUTTON_1_DES"></field>
+
+			<field name="btn-link1" type="text" default="" label="SLIDESHOW_BUTTON_LINK_1" description="SLIDESHOW_BUTTON_LINK_1_DES"></field>
+
+			<field name="button2" type="text" default="" label="SLIDESHOW_BUTTON_2" description="SLIDESHOW_BUTTON_2_DES"></field>
+
+			<field name="btn-link2" type="text" default="" label="SLIDESHOW_BUTTON_LINK_2" description="SLIDESHOW_BUTTON_LINK_2_DES"></field>
+			
+			
+		</fieldset>
+  </fields>
+</form>

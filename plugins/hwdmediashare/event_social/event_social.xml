@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="hwdmediashare" version="3.0" method="upgrade">
+        <name>plg_hwdmediashare_event_social</name>
+	<author>HWD</author>
+	<creationDate>2016-04-21</creationDate>
+	<copyright>(C) 2014 Highwood Design Limited</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@hwdmediashare.co.uk</authorEmail>
+	<authorUrl>http://hwdmediashare.co.uk</authorUrl>
+	<version>2.0.5</version> 
+        <description>PLG_HWDMEDIASHARE_EVENT_SOCIAL_XML_DESCRIPTION</description>
+        <files>
+                <filename plugin="event_social">event_social.php</filename>
+		<filename>language/en-GB/en-GB.plg_hwdmediashare_event_social.sys.ini</filename>
+		<filename>index.html</filename>
+        </files>
+        <languages>
+                <language tag="en-GB">language/en-GB/en-GB.plg_hwdmediashare_event_social.ini</language>
+                <language tag="en-GB">language/en-GB/en-GB.plg_hwdmediashare_event_social.sys.ini</language>
+        </languages> 
+	<config>
+		<fields 
+                        name="params"
+                        addfieldpath="/administrator/components/com_hwdmediashare/models/fields/"
+                        addrulepath="/administrator/components/com_hwdmediashare/models/rules"     
+                >
+                        <fieldset 
+                                name="easysocial"
+				label="PLG_HWDMEDIASHARE_EVENT_SOCIAL_FIELDSET_EASYSOCIAL_LABEL"
+			>                            
+				<field 
+                                        name="easysocial_mediaadd_stream" 
+                                        type="radio"
+					label="PLG_HWDMEDIASHARE_EVENT_SOCIAL_FIELD_EASYSOCIAL_MEDIAADD_STREAM_LABEL"
+					description="PLG_HWDMEDIASHARE_EVENT_SOCIAL_FIELD_EASYSOCIAL_MEDIAADD_STREAM_DESC"
+                                        class="btn-group btn-group-yesno"
+					default="1"
+				>
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+				</field>
+                        </fieldset>  
+                        <fieldset 
+                                name="jomsocial"
+				label="PLG_HWDMEDIASHARE_EVENT_SOCIAL_FIELDSET_JOMSOCIAL_LABEL"
+			>                            
+				<field 
+                                        name="easysocial_mediaadd_stream" 
+                                        type="radio"
+					label="PLG_HWDMEDIASHARE_EVENT_SOCIAL_FIELD_JOMSOCIAL_MEDIAADD_STREAM_LABEL"
+					description="PLG_HWDMEDIASHARE_EVENT_SOCIAL_FIELD_JOMSOCIAL_MEDIAADD_STREAM_DESC"
+                                        class="btn-group btn-group-yesno"
+					default="1"
+				>
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+				</field> 
+                        </fieldset>                         
+                </fields>
+        </config>   
+</extension>

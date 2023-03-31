@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field 
+                        name="searchable" 
+                        type="list"
+			label="COM_HWDMS_BATCH_SEARCHABLE_LABEL"
+			description="COM_HWDMS_BATCH_SEARCHABLE_DESC"
+			default=""
+		>
+			<option value="">COM_HWDMS_OPTION_KEEP_ORIGINAL_VALUE</option>
+			<option value="1">COM_HWDMS_OPTION_SEARCHABLE</option>
+			<option value="0">COM_HWDMS_OPTION_UNSEARCHABLE</option>
+		</field>
+		<field 
+                        name="visible" 
+                        type="list"
+			label="COM_HWDMS_BATCH_VISIBLE_LABEL"
+			description="COM_HWDMS_BATCH_VISIBLE_DESC"
+			default=""
+		>
+			<option value="">COM_HWDMS_OPTION_KEEP_ORIGINAL_VALUE</option>
+			<option value="1">COM_HWDMS_OPTION_VISIBLE</option>
+			<option value="0">COM_HWDMS_OPTION_UNVISIBLE</option>
+		</field>
+		<field 
+                        name="required"
+                        type="list"
+			label="COM_HWDMS_BATCH_REQUIRED_LABEL"
+			description="COM_HWDMS_BATCH_REQUIRED_DESC"
+			default=""
+		>
+			<option value="">COM_HWDMS_OPTION_KEEP_ORIGINAL_VALUE</option>
+			<option value="1">COM_HWDMS_OPTION_REQUIRED</option>
+			<option value="0">COM_HWDMS_OPTION_UNREQUIRED</option>
+		</field> 
+		<field 
+                        name="downloadaccess"
+                        type="accesslevel"
+			label="COM_HWDMS_BATCH_DOWNLOADACCESS_LABEL"
+			description="COM_HWDMS_BATCH_DOWNLOADACCESS_DESC"
+			default=""
+		>
+			<option value="">COM_HWDMS_OPTION_KEEP_ORIGINAL_VALUE</option>
+		</field> 
+                <field
+                        name="assignprocess"
+                        type="process"
+                        label="COM_HWDMS_BATCH_ASSIGNPROCESS_LABEL"
+                        description="COM_HWDMS_BATCH_ASSIGNPROCESS_DESC"
+                        default=""                        
+                >
+                        <option value="">COM_HWDMS_OPTION_NONE</option>
+                </field>                 
+                <field
+                        name="assigncategory"
+                        type="category"
+                        extension="com_hwdmediashare"
+                        label="COM_HWDMS_BATCH_ASSIGNCATEGORY_LABEL"
+                        description="COM_HWDMS_BATCH_ASSIGNCATEGORY_DESC"
+                        default=""                        
+                >
+                        <option value="0">COM_HWDMS_OPTION_NONE</option>
+                </field>                         
+                <field
+                        name="unassigncategory"
+                        type="category"
+                        extension="com_hwdmediashare"
+                        label="COM_HWDMS_BATCH_UNASSIGNCATEGORY_LABEL"
+                        description="COM_HWDMS_BATCH_UNASSIGNCATEGORY_DESC"
+                        default=""                        
+                >
+                        <option value="0">COM_HWDMS_OPTION_NONE</option>
+                </field> 
+ 		<field
+                        name="assignalbum"
+                        type="album"
+                        label="COM_HWDMS_BATCH_ASSIGNALBUM_LABEL"
+                        description="COM_HWDMS_BATCH_ASSIGNALBUM_DESC"
+                />
+ 		<field
+                        name="unassignalbum"
+                        type="album"
+                        label="COM_HWDMS_BATCH_UNASSIGNALBUM_LABEL"
+                        description="COM_HWDMS_BATCH_UNASSIGNALBUM_DESC"
+                />
+ 		<field
+                        name="assignplaylist"
+                        type="playlist"
+                        label="COM_HWDMS_BATCH_ASSIGNPLAYLIST_LABEL"
+                        description="COM_HWDMS_BATCH_ASSIGNPLAYLIST_DESC"
+                />
+ 		<field
+                        name="unassignplaylist"
+                        type="playlist"
+                        label="COM_HWDMS_BATCH_UNASSIGNPLAYLIST_LABEL"
+                        description="COM_HWDMS_BATCH_UNASSIGNPLAYLIST_DESC"
+                />
+ 		<field
+                        name="assigngroup"
+                        type="group"
+                        label="COM_HWDMS_BATCH_ASSIGNGROUP_LABEL"
+                        description="COM_HWDMS_BATCH_ASSIGNGROUP_DESC"
+                />
+ 		<field
+                        name="unassigngroup"
+                        type="group"
+                        label="COM_HWDMS_BATCH_UNASSIGNGROUP_LABEL"
+                        description="COM_HWDMS_BATCH_UNASSIGNGROUP_DESC"
+                />
+        </fieldset>
+</form>
+

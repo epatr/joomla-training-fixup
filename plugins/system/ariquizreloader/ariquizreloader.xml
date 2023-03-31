@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" type="plugin" group="system" method="upgrade" client="site">
+	<name>System - ARI Quiz Reloader</name>
+	<author>ARI Soft</author>
+	<creationDate>April 2016</creationDate>
+	<copyright>ARI Soft</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@ari-soft.com</authorEmail>
+	<authorUrl>www.ari-soft.com</authorUrl>
+	<version>1.5.1</version>
+	<description>ARI QUIZ RELOADER PLUGIN</description>
+	<files>
+		<filename plugin="ariquizreloader">ariquizreloader.php</filename>
+		<filename>ariquizreloader.xml</filename>
+		<folder>ariquizreloader</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_ariquizreloader.ini</language>
+	</languages>
+</extension>

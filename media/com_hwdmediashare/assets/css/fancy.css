@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document Copyright (C) 2015 Highwood Design Limited. All rights reserved.
+/**********************************************************************************************/
+.swiff-uploader-box a {
+	display:none !important;
+}
+/* Class .hover simulates the flash interactions */
+#hwd-upload-status a:hover, #hwd-upload-status a.hover {
+	/* color:#ffffff; */
+}
+#hwd-upload-status {
+	/* padding:10px 15px; */
+}
+#hwd-upload-status p {
+	padding:0;
+	margin:0 0 10px 0;
+}
+#hwd-upload-status .current-text {
+	padding:0;
+	margin:10px 0 10px 0;
+}
+/* Progress bar */
+#hwd-upload-status .btn-group {
+        margin-bottom:20px;
+}
+#hwd-upload-status .hwd-upload-progress {
+        background:#ccc; 
+        border:0; 
+        height:20px; 
+        width:100%;
+}
+#hwd-upload-status .hwd-upload-progress div { 
+        background:#559900; 
+        height:20px;
+}
+#hwd-upload-status .overall-title,
+#hwd-upload-status .current-title {
+	display:block;
+	margin-bottom:5px;
+	margin-top:5px;
+}
+#hwd-upload-status .progress-text {
+	font-size:0.9em;
+	font-weight:bold;
+}
+/* File list */
+#hwd-upload-list {
+	list-style:none;
+	padding:0;
+        margin:0;
+        clear:both;
+}
+#hwd-upload-list li.validation-error {
+	overflow:auto;
+        margin:10px 0;
+        padding:20px;
+        border-left:3px solid #eee;
+        background-color:#f4f8fa;
+        border-color:#bce8f1;      
+        background-color:#fdf7f7;
+        border-color:#eed3d7;
+}
+#hwd-upload-list li.file {
+	overflow:auto;
+        margin:10px 0;
+        padding:20px;
+        border-left:3px solid #eee;
+        background-color:#f4f8fa;
+        border-color:#bce8f1;      
+}
+#hwd-upload-list li.file.file-uploading {
+        background-color:#faf8f0;
+        border-color:#faebcc;
+}
+#hwd-upload-list li.file.file-success {
+        background-color:#D6E9C6;
+        border-color:#468847;
+}
+#hwd-upload-list li.file.file-failed {
+        background-color:#fdf7f7;
+        border-color:#eed3d7;
+}
+#hwd-upload-list li.file .file-name {
+	font-size:1.2em;
+	display:block;
+	clear:left;
+	line-height:40px;
+	height:40px;
+	font-weight:bold;
+}
+#hwd-upload-list li.file .file-size {
+	font-size:0.9em;
+	line-height:18px;
+	float:right;
+	margin-top:2px;
+	margin-right:6px;
+}
+#hwd-upload-list li.file .file-info {
+	display:block;
+	font-size:0.9em;
+	line-height:20px;
+	font-weight:normal;        
+}
+#hwd-upload-list li.file .file-remove {
+	clear:right;
+	float:right;
+	line-height:18px;
+	margin-right:6px;
+}
+#upload_slots div {
+	display:block;
+	margin:0 0 5px 0;
+	clear:both;
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>COM_HWDMEDIASHARE</name>
+	<author>HWD</author>
+	<creationDate>2016-04-21</creationDate>
+	<copyright>(C) 2014 Highwood Design Limited</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@hwdmediashare.co.uk</authorEmail>
+	<authorUrl>http://hwdmediashare.co.uk</authorUrl>
+	<version>2.0.5</version>   
+	<description>COM_HWDMEDIASHARE_DESCRIPTION</description>
+        <!-- Installation script -->
+	<scriptfile>script.php</scriptfile>
+        <!-- SQL files -->
+	<install> 
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> 
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+        <!-- Site files -->
+	<files folder="site">
+		<folder>controllers</folder>
+                <folder>helpers</folder>
+                <folder>libraries</folder>
+                <folder>models</folder>
+                <folder>views</folder>            
+                <filename>controller.php</filename>
+                <filename>hwdmediashare.php</filename>
+                <filename>index.html</filename>
+                <filename>jomsocial_rule.xml</filename>
+                <filename>router.php</filename>
+	</files>
+        <!-- Site language files -->
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_hwdmediashare.ini</language>
+	</languages>
+        <!-- Administrator -->
+	<administration>
+                <!-- Administrator menu -->
+		<menu>COM_HWDMEDIASHARE_MENU</menu>
+		<submenu>
+			<menu link="option=com_hwdmediashare&amp;view=dashboard" view="dashboard" img="class:hwd-dashboard" alt="COM_HWDMS_SUBMENU_DASHBOARD">COM_HWDMS_SUBMENU_DASHBOARD</menu>
+			<menu link="option=com_hwdmediashare&amp;view=media" view="media" img="class:hwd-media" alt="COM_HWDMS_SUBMENU_MEDIA">COM_HWDMS_SUBMENU_MEDIA</menu>
+			<menu link="option=com_categories&amp;extension=com_hwdmediashare" view="categories" img="class:hwd-categories" alt="COM_HWDMS_SUBMENU_CATEGORIES">COM_HWDMS_SUBMENU_CATEGORIES</menu>
+			<menu link="option=com_hwdmediashare&amp;view=configuration" view="configuration" img="class:hwd-configuation" alt="COM_HWDMS_SUBMENU_CONFIGURATION">COM_HWDMS_SUBMENU_CONFIGURATION</menu>
+		</submenu>                
+                <!-- Administrator files -->
+		<files folder="admin">
+                        <folder>controllers</folder>
+                        <folder>helpers</folder>
+                        <filename>language/en-GB/en-GB.com_hwdmediashare.sys.ini</filename>
+                        <folder>models</folder>
+                        <folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+                        <filename>access.xml</filename>
+			<filename>cli.php</filename>
+                        <filename>config.ini</filename>
+                        <filename>config.xml</filename>
+                        <filename>controller.php</filename>
+                        <filename>hwdmediashare.php</filename>
+                        <filename>index.html</filename>
+                        <filename>toolbar.xml</filename>
+		</files>
+                <!-- Administrator language files -->
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_hwdmediashare.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_hwdmediashare.sys.ini</language>
+		</languages>
+        </administration>
+        <!-- Media files -->
+	<media destination="com_hwdmediashare" folder="media">
+		<filename>index.html</filename>
+		<folder>assets</folder>
+	</media>       
+</extension>
+

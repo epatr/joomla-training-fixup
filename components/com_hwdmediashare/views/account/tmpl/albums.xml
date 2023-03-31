@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <layout title="COM_HWDMEDIASHARE_ACCOUNT_VIEW_DEFAULT_TITLE">
+                <message>COM_HWDMEDIASHARE_ACCOUNT_VIEW_DEFAULT_DESC</message>
+        </layout>
+        <fields name="request">
+                <fieldset name="request">
+                        <field
+                                name="layout"
+                                type="list"
+                                label="COM_HWDMS_ACCOUNT_LAYOUT_LABEL"
+                                description="COM_HWDMS_ACCOUNT_LAYOUT_DESC"
+                                default="media"
+                        >
+                                <option value="media">COM_HWDMS_MY_MEDIA</option>
+                                <option value="favourites">COM_HWDMS_MY_FAVOURITES</option>
+                                <option value="albums">COM_HWDMS_MY_ALBUMS</option>
+                                <option value="groups">COM_HWDMS_MY_GROUPS</option>
+                                <option value="playlists">COM_HWDMS_MY_PLAYLISTS</option>
+                                <option value="subscriptions">COM_HWDMS_MY_SUBSCRIPTIONS</option>
+                                <option value="memberships">COM_HWDMS_MY_MEMBERSHIPS</option>
+                        </field>
+                </fieldset>
+        </fields>
+</metadata>

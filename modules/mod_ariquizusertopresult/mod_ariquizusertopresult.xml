@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="1.6.0" type="module" method="upgrade" client="site">
+	<name>ARI Quiz User Top Results</name>
+	<creationDate>December 2012</creationDate>
+	<author>ARI Soft</author>
+	<copyright>ARI Soft</copyright>
+	<authorEmail>info@ari-soft.com</authorEmail>
+	<authorUrl>www.ari-soft.com</authorUrl>
+	<version>2.1.1</version>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>MODULE_ARIQUIZUSERTOPRESULT</description>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_ariquizusertopresult.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_ariquizusertopresult.sys.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_ariquizusertopresult">mod_ariquizusertopresult.php</filename>
+		<filename>mod_ariquizusertopresult.xml</filename>
+		<filename>module.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_ARIQUIZUSERTOPRESULT_CLASSSUFFIX" description="PARAMMODULECLASSSUFFIX" />
+				<field name="label" type="text" default="" label="MOD_ARIQUIZUSERTOPRESULT_LABEL" description="MOD_ARIQUIZUSERTOPRESULT_DESCR_LABEL" />
+				<field name="count" type="text" default="5" label="MOD_ARIQUIZUSERTOPRESULT_COUNT" description="MOD_ARIQUIZUSERTOPRESULT_DESCR_COUNT" />
+				<field name="pointUnit" type="list" default="percent" label="MOD_ARIQUIZUSERTOPRESULT_MEASUREUNIT" description="MOD_ARIQUIZUSERTOPRESULT_DESCR_MEASUREUNIT">
+					<option value="percent">MOD_ARIQUIZUSERTOPRESULT_PERCENT</option> 
+					<option value="point">MOD_ARIQUIZUSERTOPRESULT_POINT</option> 
+				</field>
+				<field name="showQuizLink" type="list" default="0" label="MOD_ARIQUIZUSERTOPRESULT_SHOWQUIZLINK" description="MOD_ARIQUIZUSERTOPRESULT_DESCR_SHOWQUIZLINK">
+					<option value="0">MOD_ARIQUIZUSERTOPRESULT_NO</option> 
+					<option value="1">MOD_ARIQUIZUSERTOPRESULT_YES</option> 
+				</field>
+				<field name="addMenuItemToLink" type="list" default="0" label="MOD_ARIQUIZUSERTOPRESULT_ADDITEMIDTOLINK" description="MOD_ARIQUIZUSERTOPRESULT_DESCR_ADDITEMIDTOLINK">
+					<option value="0">MOD_ARIQUIZUSERTOPRESULT_NO</option> 
+					<option value="1">MOD_ARIQUIZUSERTOPRESULT_YES</option> 
+				</field>
+				<field name="itemId" type="menuItem" default="" label="MOD_ARIQUIZUSERTOPRESULT_MENUITEM" description="MOD_ARIQUIZUSERTOPRESULT_DESCR_MENUITEM" />
+				<field name="emptyMessage" type="textarea" rows="3" cols="45" default="" label="MOD_ARIQUIZUSERTOPRESULT_EMPTYMESSAGE" description="MOD_ARIQUIZUSERTOPRESULT_DESCR_EMPTYMESSAGE" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

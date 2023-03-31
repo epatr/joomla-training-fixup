@@ -1,0 +1,40 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.acm-cta {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding: @grid-gutter-width * 2 0;
+	text-align: center;
+
+	// Mobile view
+	@media (max-width: @screen-xs-max) {
+		padding: @t3-global-padding 0;
+	}
+
+	// Title
+	h2 {
+		color: @white;
+		font-weight: 400;
+		display: inline-block;
+		margin: 0 @grid-gutter-width * 2 0 0;
+
+		// Mobile view
+		@media (max-width: @screen-xs-max) {
+			display: block;
+			margin-right: 0;
+			margin-bottom: @t3-global-padding;
+		}
+	}
+
+	// Button
+	.btn {
+		box-shadow: 8px 0 16px rgba(0, 0, 0, 0.1);
+	}
+}

@@ -1,0 +1,127 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Jason Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+ */
+
+/* MAIN STYLE
+---------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.625;
+  margin: 0;
+  background-color: #f4f5f6;
+}
+
+/* OutLine */
+#outline {
+  margin-top: 7%;
+  text-align: center;
+}
+
+/* Eror Code */
+.error-code {
+  color: #ff5a00;
+  font-size: 300px;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+  letter-spacing: -10px;
+}
+
+/* Eror Code */
+.error-code span.first,
+.error-code span.last {
+  color: #000;
+}
+
+
+/* Message Error */
+.error-message {
+}
+
+/* Message Error */
+.error-message h2 {
+  color: #222222;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 10px;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+#errorboxbody p {
+  color: #444;
+  display: block;
+  margin: 0 0 30px;
+  font-size: 18px;
+}
+
+/* Button Home */
+.button-home {
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.53846;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  background-color: #4275f4;
+  border: 1px solid #2a63f3;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-home:hover,
+.button-home:focus,
+.button-home:active {
+  background-color: #1252f1;
+  border-color: #0c45d3;
+}
+
+@media (max-width:  360px){
+
+  /* OutLine */
+  #outline {
+    margin-top: 20%;
+  }
+
+  /* Eror Code */
+  .error-code {
+    font-size: 170px;
+  }
+
+  /* Message Error */
+  .error-message {
+  }
+
+  /* Message Error */
+  .error-message h2 {
+    font-size: 24px;
+  }
+
+  #errorboxbody p {
+    font-size: 14px;
+  }
+
+  /* Button Home */
+  .button-home {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}

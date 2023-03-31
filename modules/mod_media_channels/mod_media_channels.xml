@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>mod_media_channels</name>
+	<author>HWD</author>
+	<creationDate>2016-04-21</creationDate>
+	<copyright>(C) 2014 Highwood Design Limited</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@hwdmediashare.co.uk</authorEmail>
+	<authorUrl>http://hwdmediashare.co.uk</authorUrl>
+	<version>2.0.5</version>  
+	<description>MOD_MEDIA_CHANNELS_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_media_channels">mod_media_channels.php</filename>
+                <filename>language/en-GB/en-GB.mod_media_channels.sys.ini</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>		
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_media_channels.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_media_channels.sys.ini</language>
+	</languages>
+	<config>
+		<fields 
+                        name="params"
+                        addfieldpath="/administrator/components/com_hwdmediashare/models/fields/"
+                        addrulepath="/administrator/components/com_hwdmediashare/models/rules"     
+                >
+			<fieldset 
+                                name="basic"                         
+			>
+				<field 
+                                        name="count" 
+                                        type="text" 
+					label="MOD_MEDIA_CHANNELS_FIELD_COUNT_LABEL"
+					description="MOD_MEDIA_CHANNELS_FIELD_COUNT_DESC" 
+                                        default="6"
+                                        validate="integer"
+                                        filter="integer"
+                                />                            
+				<field 
+                                        name="show_featured" 
+                                        type="list" 
+					label="MOD_MEDIA_CHANNELS_FIELD_SHOWFEATURED_LABEL"
+					description="MOD_MEDIA_CHANNELS_FIELD_SHOWFEATURED_DESC"
+                                        default="show"
+				>
+					<option value="show">JSHOW</option>
+					<option value="hide">JHIDE</option>
+					<option value="only">MOD_MEDIA_CHANNELS_OPTION_ONLYFEATURED_VALUE</option>
+				</field>
+				<field 
+                                        name="list_order_channel" 
+                                        type="channelfullordering"
+					label="MOD_MEDIA_CHANNELS_FIELD_ORDERING_LABEL"
+					description="MOD_MEDIA_CHANNELS_FIELD_ORDERING_DESC"
+					default="a.created DESC"
+				>                      
+				</field>                                 
+			</fieldset>
+                        <fieldset 
+                                name="filtering"
+				label="MOD_MEDIA_CHANNELS_FIELDSET_FILTERING_LABEL"
+			>
+				<field name="spacer_datefiltering" label="MOD_MEDIA_CHANNELS_SPACER_DATEFILTERING" type="spacer" />                             
+				<field 
+                                        name="date_filtering" 
+                                        type="list" 
+					label="MOD_MEDIA_CHANNELS_FIELD_DATEFILTERING_LABEL"
+					description="MOD_MEDIA_CHANNELS_FIELD_DATEFILTERING_DESC"
+                                        default="off"
+				>
+					<option value="off">MOD_MEDIA_CHANNELS_OPTION_OFF_VALUE</option>
+					<option value="range">MOD_MEDIA_CHANNELS_OPTION_DATERANGE_VALUE</option>
+					<option value="relative">MOD_MEDIA_CHANNELS_OPTION_RELATIVEDAY_VALUE</option>
+				</field>
+				<field 
+                                        name="date_field" 
+                                        type="list" 
+					label="MOD_MEDIA_CHANNELS_FIELD_DATERANGEFIELD_LABEL"
+					description="MOD_MEDIA_CHANNELS_FIELD_DATERANGEFIELD_DESC"
+                                        default="a.created"
+				>
+					<option value="a.created">MOD_MEDIA_CHANNELS_OPTION_CREATED_VALUE</option>
+					<option value="a.modified">MOD_MEDIA_CHANNELS_OPTION_MODIFIED_VALUE</option>
+					<option value="a.publish_up">MOD_MEDIA_CHANNELS_OPTION_STARTPUBLISHING_VALUE</option>
+				</field>
+				<field 
+                                        name="start_date_range" 
+                                        type="calendar"
+					format="%Y-%m-%d %H:%M:%S"
+					label="MOD_MEDIA_CHANNELS_FIELD_STARTDATE_LABEL"
+					description="MOD_MEDIA_CHANNELS_FIELD_STARTDATE_DESC"
+					size="22"
+					filter="user_utc" 
+                                />
+				<field 
+                                        name="end_date_range" 
+                                        type="calendar"
+					format="%Y-%m-%d %H:%M:%S"
+					label="MOD_MEDIA_CHANNELS_FIELD_ENDDATE_LABEL"
+					description="MOD_MEDIA_CHANNELS_FIELD_ENDDATE_DESC"
+					size="22"
+					filter="user_utc" 
+                                />
+				<field 
+                                        name="relative_date" 
+                                        type="text" 
+					label="MOD_MEDIA_CHANNELS_FIELD_RELATIVEDATE_LABEL"
+					description="MOD_MEDIA_CHANNELS_FIELD_RELATIVEDATE_DESC" 
+                                        default="30"
+                                />
+			</fieldset>
+			<fieldset 
+                                name="display"
+				label="MOD_MEDIA_CHANNELS_FIELDSET_DISPLAY_LABEL"
+			>
+                                <field
+                                        name="list_columns"
+                                        type="list"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_COLUMNS_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_COLUMNS_DESC"
+                                        default=""
+                                >
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                </field>                            
+                                <field
+                                        name="list_meta_title"
+                                        type="radio"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_SHOW_TITLE_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_SHOW_TITLE_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_meta_thumbnail"
+                                        type="radio"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_SHOW_THUMBNAIL_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_SHOW_THUMBNAIL_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_meta_type_icon"
+                                        type="radio"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_SHOW_MEDIA_TYPE_ICON_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_SHOW_MEDIA_TYPE_ICON_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>                                
+                                <field
+                                        name="list_meta_description"
+                                        type="radio"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_SHOW_DESCRIPTION_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_SHOW_DESCRIPTION_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field> 
+                                <field
+                                        name="list_meta_author"
+                                        type="radio"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_SHOW_AUTHOR_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_SHOW_AUTHOR_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_meta_likes"
+                                        type="radio"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_SHOW_LIKES_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_SHOW_LIKES_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_meta_dislikes"
+                                        type="radio"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_SHOW_DISLIKES_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_SHOW_DISLIKES_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field> 
+                                <field
+                                        name="list_meta_hits"
+                                        type="radio"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_SHOW_VIEWS_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_SHOW_VIEWS_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_meta_created"
+                                        type="radio"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_SHOW_DATE_CREATED_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_SHOW_DATE_CREATED_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>   
+                                <field
+                                        name="list_meta_featured_status"
+                                        type="radio"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_SHOW_FEATURED_STATUS_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_SHOW_FEATURED_STATUS_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_meta_upload_count"
+                                        type="radio"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_SHOW_UPLOAD_COUNT_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_SHOW_UPLOAD_COUNT_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>                 
+                                <field
+                                        name="list_meta_subscriber_count"
+                                        type="radio"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_SHOW_SUBSCRIBER_COUNT_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_SHOW_SUBSCRIBER_COUNT_DESC"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>                                                                                                                                                                                                                                                                                                                                                                                                 
+                                <field 
+                                        name="list_item_heading" 
+                                        type="list" 
+                                        label="MOD_MEDIA_CHANNELS_FIELD_HEADING_LEVEL_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_HEADING_LEVEL_DESC"
+                                        default=""
+                                >
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                        <option value="1">JH1</option>
+                                        <option value="2">JH2</option>
+                                        <option value="3">JH3</option>
+                                        <option value="4">JH4</option>
+                                        <option value="5">JH5</option>
+                                        <option value="6">JH6</option>
+                                </field>
+                                <field 
+                                        name="list_link_titles" 
+                                        type="radio" 
+                                        label="MOD_MEDIA_CHANNELS_FIELD_LINKED_TITLES_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_LINKED_TITLES_LABEL"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field 
+                                        name="list_link_thumbnails" 
+                                        type="radio" 
+                                        label="MOD_MEDIA_CHANNELS_FIELD_LINKED_THUMBNAILS_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_LINKED_THUMBNAILS_LABEL"
+                                        class="btn-group btn-group-yesno"
+                                        default=""
+                                >
+                                        <option value="1">JYES</option>
+                                        <option value="0">JNO</option>
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                </field>
+                                <field
+                                        name="list_title_truncate"
+                                        type="text"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_TRUNCATE_TITLE_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_TRUNCATE_TITLE_DESC"
+                                        default=""
+                                />
+                                <field
+                                        name="list_desc_truncate"
+                                        type="text"
+                                        label="MOD_MEDIA_CHANNELS_FIELD_TRUNCATE_DESC_LABEL"
+                                        description="MOD_MEDIA_CHANNELS_FIELD_TRUNCATE_DESC_DESC"
+                                        default=""
+                                />
+				<field
+					name="show_more_link"
+					type="menuitem"
+					label="MOD_MEDIA_CHANNELS_FIELD_SHOWMORELINK_LABEL"
+					description="MOD_MEDIA_CHANNELS_FIELD_SHOWMORELINK_DESC"
+					default="hide"
+				>
+                                        <option value="show">JSHOW</option>
+                                        <option value="hide">JHIDE</option>
+				</field>
+                                <field 
+                                        name="more_link_text" 
+                                        type="text" 
+					label="MOD_MEDIA_CHANNELS_FIELD_SHOWMORETEXT_LABEL"
+					description="MOD_MEDIA_CHANNELS_FIELD_SHOWMORETEXT_DESC"
+                                        default=""
+                                />
+			</fieldset>
+			<fieldset name="advanced">
+				<field 
+                                        name="layout" 
+                                        type="modulelayout"
+					label="MOD_MEDIA_CHANNELS_FIELD_LAYOUT_LABEL" 
+                                        description="MOD_MEDIA_CHANNELS_FIELD_LAYOUT_DESC" 
+                                        default="_:default"
+                                />                            
+				<field 
+                                        name="moduleclass_sfx" 
+                                        type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" 
+                                />
+				<field 
+                                        name="owncache" 
+                                        type="list" 
+					label="COM_MODULES_FIELD_CACHING_LABEL" 
+                                        description="COM_MODULES_FIELD_CACHING_DESC" 
+                                        default="1"
+                                >
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field 
+                                        name="cache_time" 
+                                        type="text" 
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" 
+                                        description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+                                        default="900"
+                                />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

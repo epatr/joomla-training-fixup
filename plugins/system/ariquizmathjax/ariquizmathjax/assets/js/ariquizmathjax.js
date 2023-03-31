@@ -1,0 +1,9 @@
+/** 
+ *
+ * @author		ARI Soft
+ * @copyright	Copyright (c) 2013 www.ari-soft.com. All rights reserved
+ * @license		GNU/GPL (http://www.gnu.org/copyleft/gpl.html)
+ *
+**/
+
+;eval(function(p,a,c,k,e,r){e=function(c){return(c<62?'':e(parseInt(c/62)))+((c=c%62)<36?c.toString(36):String.fromCharCode(c+29))};if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];k=[function(e){return r[e]||e}];e=function(){return'\\w'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('7(2(1)!="3")1.l.Event.on(0,"load",8(){9 5=8(t){7(2(m)!="3")m.u.Queue(["Typeset",m.u,t])};7(2(0.n)!=\'3\'||(2(0.v)!=\'3\')&&2(0.v.w)!=\'3\'){9 f=(2(0.n)!=\'3\'),6=f?0.n:0.1.4.w.questionManager.o,x=6.y,z=6.A,B=6.C;6.y=8(){9 b=x.c(f?6:d,e);5("a");p b};6.A=8(){9 b=z.c(f?6:d,e);5("a");p b};6.C=8(){9 b=B.c(f?6:d,e);5("a");p b}};7(2(0.1)!=\'3\'&&2(0.1.4)!=\'3\'&&2(0.1.4.h)!=\'3\'&&2(0.1.4.h.q)!=\'3\'){9 D=0.1.4.h.q;0.1.4.h.q=8(){D.c(d,e);7(1.l.E.F("a"))5("a");G 5("i")}};7(2(0.1)!=\'3\'&&2(0.1.j)!=\'3\'&&2(0.1.j.r)!=\'3\'){9 H=0.1.j.r.o.I;0.1.j.r.o.I=8(){H.c(d,e);5("i")}};7(2(0.1)!=\'3\'&&2(0.1.4)!=\'3\'&&2(0.1.4.g)!=\'3\'&&2(0.1.4.g.k)!=\'3\'&&2(0.1.4.g.k.s)!=\'3\'){9 J=0.1.4.g.k.s;0.1.4.g.k.s=8(){J.c(d,e);5("i")}};7(1.l.E.F("a"))5("a");G 5("i")});',[],46,'window|YAHOO|typeof|undefined|ARISoft|renderMathExpressions|aqManager|if|function|var|ariQuestions|res|apply|this|arguments|isObjInit|Quiz|DOM|dtResults|widget|formatters|util|MathJax|ariQuizQueManager|prototype|return|updateHtml|DataTable|formatQuestionStatComplete|containerId|Hub|aris|ariQuiz|oldDrawQuestion|_drawQuestion|oldShowCorrectAnswer|_showCorrectAnswer|oldShowExplanation|_showExplanationQuestion|oldUpdateHtmlHandler|Dom|get|else|oldRenderHandler|render|oldFormatQuestionStatComplete'.split('|'),0,{}));

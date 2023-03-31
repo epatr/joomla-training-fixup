@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+        addfieldpath="/administrator/components/com_hwdmediashare/models/fields/"
+        addrulepath="/administrator/components/com_hwdmediashare/models/rules"  
+>
+	<fieldset 
+                name="details"
+                label="COM_HWDMS_DETAILS"
+        >
+		<field
+			name="id"
+			type="hidden"
+		/>
+                <field 
+                        name="asset_id" 
+                        type="hidden" 
+                        filter="unset" 
+                />
+                <field
+			name="title"
+			type="text"
+			label="COM_HWDMS_TITLE_LABEL"
+			description="COM_HWDMS_TITLE_DESC"
+			required="true"
+			hint="COM_HWDMS_TITLE_LABEL"
+                        class="input-large-text hwd-form-title span12"                        
+		/>
+                <field
+			name="alias"
+			type="text"
+			label="COM_HWDMS_ALIAS_LABEL"
+			description="COM_HWDMS_ALIAS_DESC"
+		/>
+		<field 
+                        name="description" 
+                        type="hwdeditor" 
+			label="COM_HWDMS_DESCRIPTION_LABEL" 
+                        description="COM_HWDMS_DESCRIPTION_DESC"
+			filter="safehtml" 
+                        buttons="true"
+                />
+                <field
+                        name="catid"
+                        type="category"
+                        extension="com_hwdmediashare"
+                        default=""
+                        label="COM_HWDMS_CATEGORY_LABEL"
+                        description="COM_HWDMS_CATEGORY_DESC"
+                        multiple="multiple"
+                        required="false"                        
+                        class="hwd-form-catid span12"
+                >
+                        <option value="0">COM_HWDMS_LIST_SELECT_NO_CATEGORY</option>
+                </field>          
+                <field
+			name="tags"
+			type="tag"
+			label="COM_HWDMS_TAGS_LABEL"
+			description="COM_HWDMS_TAGS_DESC"
+                        multiple="true"
+                        class="hwd-form-tags span12"                        
+		/>
+		<field 
+                        name="featured" 
+                        type="radio"
+			label="JFEATURED"
+			description="COM_HWDMS_FEATURED_DESC"
+                        class="btn-group btn-group-yesno"
+			default="0"
+                        validate="integer"
+                        filter="integer"
+		>
+			<option value="1">COM_HWDMS_OPTION_FEATURED</option>
+			<option value="0">COM_HWDMS_OPTION_UNFEATURED</option>
+		</field>                
+		<field 
+                        name="status" 
+                        type="radio"
+			label="JSTATUS"
+			description="COM_HWDMS_STATUS_DESC"
+                        class="btn-group btn-group-yesno"
+			default="1"
+                        validate="integer"
+                        filter="integer"
+		>
+			<option value="1">COM_HWDMS_APPROVED</option>
+			<option value="0">COM_HWDMS_UNAPPROVED</option>
+		</field>
+		<field 
+                        name="published" 
+                        type="radio"
+                        label="JPUBLISHED"
+			description="JFIELD_PUBLISHED_DESC" 
+                        class="btn-group btn-group-yesno"
+			default="1"
+                        validate="integer"
+                        filter="integer"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field 
+                        name="access" 
+                        type="accesslevel" 
+                        label="COM_HWDMS_VIEWING_ACCESS_LABEL"
+			description="COM_HWDMS_VIEWING_ACCESS_DESC" 
+			default="1"
+                        validate="integer"
+                        filter="integer"
+                />
+		<field 
+                        name="download" 
+                        type="accesslevel" 
+                        label="COM_HWDMS_DOWNLOAD_ACCESS_LABEL"
+			description="COM_HWDMS_DOWNLOAD_ACCESS_DESC" 
+			default="1"
+                        validate="integer"
+                        filter="integer"
+                />      
+                <field
+			name="private"
+                        type="list" 
+			label="COM_HWDMS_PRIVATE_LABEL"
+			description="COM_HWDMS_PRIVATE_DESC"
+                        class="hwd-form-private span12"
+			default="0"
+                        validate="integer"
+                        filter="integer"
+		>
+			<option value="1">COM_HWDMS_OPTION_UNLISTED</option>
+			<option value="0">COM_HWDMS_OPTION_LISTED</option>
+		</field> 
+		<field 
+                        name="language" 
+                        type="contentlanguage" 
+                        label="COM_HWDMS_MEDIA_LANGUAGE_LABEL"
+			description="COM_HWDMS_MEDIA_LANGUAGE_DESC" 
+                        class="inputbox"
+		>
+			<option value="*">JALL</option>
+		</field>  
+                <field
+			name="location"
+			type="text"
+			label="COM_HWDMS_LOCATION_LABEL"
+			description="COM_HWDMS_LOCATION_DESC"
+                        class="hwd-form-location span12"
+			default=""
+			hint="COM_HWDMS_LOCATION_HINT"
+		/>                                             
+		<field 
+                        name="publish_up" 
+                        type="calendar"
+			label="COM_HWDMS_PUBLISH_UP_LABEL" 
+                        description="COM_HWDMS_PUBLISH_UP_DESC"
+                        format="%Y-%m-%d %H:%M:%S" 
+                        size="22"
+			filter="user_utc" 
+                />
+		<field 
+                        name="publish_down" 
+                        type="calendar"
+			label="COM_HWDMS_PUBLISH_DOWN_LABEL" 
+                        description="COM_HWDMS_PUBLISH_DOWN_DESC"
+                        format="%Y-%m-%d %H:%M:%S" 
+                        size="22"
+			filter="user_utc" 
+                />
+ 		<field
+                        name="thumbnail"
+                        type="file"
+			label="COM_HWDMS_NEW_THUMBNAIL_LABEL"
+                        description="COM_HWDMS_NEW_THUMBNAIL_DESC"
+                />
+		<field 
+                        name="remove_thumbnail" 
+                        type="radio"
+			label="COM_HWDMS_REMOVE_CURRENT_THUMBNAIL_LABEL"
+			description="COM_HWDMS_REMOVE_CURRENT_THUMBNAIL_DESC"
+                        class="btn-group btn-group-yesno"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>               
+ 	</fieldset>
+        <fields name="params">
+                <fieldset
+                        name="metadata"
+                        label="COM_HWDMS_METADATA"
+                >
+                        <field
+                                name="meta_desc"
+                                type="textarea"
+                                label="COM_HWDMS_METADESC_LABEL"
+                                description="COM_HWDMS_METADESC_DESC"
+                                filter="string"
+                                cols="55"
+                                rows="3" 
+                        />
+                        <field
+                                name="meta_keys"
+                                type="textarea"
+                                label="COM_HWDMS_METAKEYS_LABEL"
+                                description="COM_HWDMS_METAKEYS_DESC"
+                                filter="string"
+                                cols="55"
+                                rows="3"
+                        />
+                </fieldset>
+                <fieldset
+                        name="access"
+                        label="COM_HWDMS_ACCESS"
+                >
+                        <field
+                                name="author_only"
+                                type="radio"
+                                label="COM_HWDMS_AUTHOR_ONLY_LABEL"
+                                description="COM_HWDMS_AGE_RESTRICTION_DESC"
+                                class="btn-group btn-group-yesno"
+                                default="0"
+                                validate="integer"
+                                filter="integer"
+                        >
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+                        <field
+                                name="password_protect"
+                                type="radio"
+                                label="COM_HWDMS_PASSWORD_PROTECT_LABEL"
+                                description="COM_HWDMS_PASSWORD_PROTECT_DESC"
+                                class="btn-group btn-group-yesno"
+                                default="0"
+                                validate="integer"
+                                filter="integer"
+                        >
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+                        <field
+                                name="password1"
+                                type="password"
+                                label="COM_HWDMS_PASSWORD_LABEL"
+                                description="COM_HWDMS_PASSWORD_DESC"
+                                autocomplete="off"
+                        />
+                        <field
+                                name="age_restriction"
+                                type="radio"
+                                label="COM_HWDMS_AGE_RESTRICTION_LABEL"
+                                description="COM_HWDMS_AGE_RESTRICTION_DESC"
+                                class="btn-group btn-group-yesno"
+                                default="0"
+                                validate="integer"
+                                filter="integer"
+                        >
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+                        <field
+                                name="age"
+                                type="list"
+                                label="COM_HWDMS_MINIMUM_AGE_LABEL"
+                                description="COM_HWDMS_MINIMUM_AGE_DESC"
+                                class="input-small"
+                                default="18"
+                                validate="integer"
+                                filter="integer"
+                        >
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                        </field>
+                        <field
+                                name="allow_comments"
+                                type="radio"
+                                label="COM_HWDMS_ALLOW_COMMENTS_LABEL"
+                                description="COM_HWDMS_ALLOW_COMMENTS_DESC"
+                                class="btn-group btn-group-yesno"
+                                default="1"
+                                validate="integer"
+                                filter="integer"
+                        >
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+                        <field
+                                name="allow_likes"
+                                type="radio"
+                                label="COM_HWDMS_ALLOW_LIKES_LABEL"
+                                description="COM_HWDMS_ALLOW_LIKES_DESC"
+                                class="btn-group btn-group-yesno"
+                                default="1"
+                                validate="integer"
+                                filter="integer"
+                        >
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+                        <field
+                                name="allow_embedding"
+                                type="radio"
+                                label="COM_HWDMS_ALLOW_EMBEDDING_LABEL"
+                                description="COM_HWDMS_ALLOW_EMBEDDING_DESC"
+                                class="btn-group btn-group-yesno"
+                                default="1"
+                                validate="integer"
+                                filter="integer"
+                        >
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+                </fieldset>                
+	</fields>
+</form>

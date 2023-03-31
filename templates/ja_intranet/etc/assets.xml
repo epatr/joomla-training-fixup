@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets>
+	<scripts>
+        <file>js/slick/slick.js</file>
+        <file>js/isotope/isotope.pkgd.min.js</file>
+        <file>js/imagesloaded.pkgd.min.js</file>
+        <file>js/mCustomScrollbar/jquery.mousewheel.min.js</file>
+        <file>js/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js</file>
+        <file>js/mCustomScrollbar/jquery.mCustomScrollbar.js</file>
+        <file>js/script.js</file>
+	</scripts>
+	
+	<stylesheets>
+    	<file>fonts/font-awesome/css/font-awesome.min.css</file>
+        <file>fonts/ionicons/css/ionicons.min.css</file>
+        <file>//fonts.googleapis.com/css?family=Roboto:300,400,500,700</file>
+        <file>js/slick/slick.css</file>
+        <file>js/slick/slick-theme.css</file>
+        <file>js/mCustomScrollbar/jquery.mCustomScrollbar.min.css</file>
+	</stylesheets>
+	
+</assets>

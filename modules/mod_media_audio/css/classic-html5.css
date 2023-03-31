@@ -1,0 +1,25 @@
+.hwd-container .media-audio-view audio {
+	width:100%;
+}
+.hwd-container .media-audio-view a.media-track {
+	padding:8px;
+	line-height:18px;
+	vertical-align:top;
+	border-top:1px solid #ddd;
+        display:block;
+        text-decoration:none;
+        margin:0;
+}
+.hwd-container .media-audio-view a.media-track.active {
+	background:#ddd;
+}
+.hwd-container .media-audio-view a.media-track:hover {
+}
+.hwd-container .media-audio-view a.media-track:last-child {
+	border-bottom:1px solid #ddd;
+        margin-bottom:5px;
+}
+
+.hwd-container .media-audio-view .row-fluid i.icon-play {
+
+}

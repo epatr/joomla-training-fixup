@@ -1,0 +1,143 @@
+.joms-emo2 {
+    width:20px;
+    height:20px;
+    background-image:url('../../emoticons/emoticons.png');
+    background-repeat: no-repeat;
+    background-size: 120px 140px;
+    margin: 0;
+    padding: 0 !important;
+    cursor: pointer;
+}
+.joms-emo2-smile {
+	background-position: 0 0;
+}
+.joms-emo2-grin {
+    background-position: -20px 0px;	
+}
+.joms-emo2-beaming {
+	background-position: -40px 0px;
+}
+.joms-emo2-squinting {
+	background-position: -60px 0px;
+}
+.joms-emo2-star {
+	background-position: -80px 0px;
+}
+.joms-emo2-heart {
+	background-position: -100px 0px;
+}
+
+.joms-emo2-love {
+	background-position: 0 -20px;
+}
+.joms-emo2-kiss {
+	background-position: -20px -20px;
+}
+.joms-emo2-wink {
+	background-position: -40px -20px;
+}
+.joms-emo2-tongue {
+	background-position: -60px -20px;
+}
+.joms-emo2-stongue {
+	background-position: -80px -20px;
+}
+.joms-emo2-cool {
+	background-position: -100px -20px;
+}
+
+.joms-emo2-hug {
+	background-position: 0 -40px;
+}
+.joms-emo2-money {
+	background-position: -20px -40px;
+}
+.joms-emo2-poop {
+	background-position: -40px -40px;
+}
+.joms-emo2-evil {
+	background-position: -60px -40px;
+}
+.joms-emo2-joy {
+	background-position: -80px -40px;
+}
+.joms-emo2-rofl {
+	background-position: -100px -40px;
+}
+
+.joms-emo2-sweat {
+	background-position: 0 -60px;
+}
+.joms-emo2-confused {
+	background-position: -20px -60px;
+}
+.joms-emo2-flushed {
+	background-position: -40px -60px;
+}
+.joms-emo2-hmm {
+	background-position: -60px -60px;
+}
+.joms-emo2-neutral {
+	background-position: -80px -60px;
+}
+.joms-emo2-shock {
+	background-position: -100px -60px;
+}
+
+
+.joms-emo2-sleep {
+	background-position: 0 -80px;
+}
+.joms-emo2-think {
+	background-position: -20px -80px;
+}
+.joms-emo2-sexy {
+	background-position: -40px -80px;
+}
+.joms-emo2-whut {
+	background-position: -60px -80px;
+}
+.joms-emo2-unamused {
+	background-position: -80px -80px;
+}
+.joms-emo2-zipper {
+	background-position: -100px -80px;
+}
+
+.joms-emo2-sad {
+	background-position: 0 -100px;
+}
+.joms-emo2-tired {
+	background-position: -20px -100px;
+}
+.joms-emo2-worried {
+	background-position: -40px -100px;
+}
+.joms-emo2-angry {
+	background-position: -60px -100px;
+}
+.joms-emo2-pouting {
+	background-position: -80px -100px;
+}
+.joms-emo2-dizzy {
+	background-position: -100px -100px;
+}
+
+.joms-emo2-fear {
+	background-position: 0 -120px;
+}
+.joms-emo2-fearful {
+	background-position: -20px -120px;
+}
+.joms-emo2-cry {
+	background-position: -40px -120px;
+}
+.joms-emo2-ill {
+	background-position: -60px -120px;
+}
+.joms-emo2-sneezing {
+	background-position: -80px -120px;
+}
+.joms-emo2-cold {
+	background-position: -100px -120px;
+}

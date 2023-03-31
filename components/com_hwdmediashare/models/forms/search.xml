@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+        addfieldpath="/administrator/components/com_hwdmediashare/models/fields/"
+        addrulepath="/administrator/components/com_hwdmediashare/models/rules"  
+>
+	<fieldset 
+                name="details"
+                label="COM_HWDMS_DETAILS"
+        >
+                <field
+			name="keywords"
+			type="text"
+			label="COM_HWDMS_KEYWORDS_LABEL"
+			description="COM_HWDMS_KEYWORDS_DESC"
+			required="true"
+			hint="COM_HWDMS_HINT_SEARCH"
+                        class="hwd-form-keywords"                        
+		/> 
+		<field
+			name="fullordering"
+			type="mediafullordering"
+			label="COM_HWDMS_LIST_FULL_ORDERING"
+			description="COM_HWDMS_LIST_FULL_ORDERING_DESC"
+			onchange="this.form.submit();"
+			default="a.created DESC"
+		/>
+		<field
+			name="limit"
+			type="hwdlimitbox"
+			class="inputbox input-mini"
+			default="25"
+			label="COM_HWDMS_LIST_LIMIT"
+			description="COM_HWDMS_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+			showall="false"
+		/>                
+	</fieldset>
+	<fieldset 
+                name="media"
+                label="COM_HWDMS_MEDIA"
+        >               
+	</fieldset>        
+</form>

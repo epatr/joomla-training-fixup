@@ -1,0 +1,782 @@
+/*
+$JA#COPYRIGHT$
+*/
+ 
+
+// --------------------------------------------------
+// CORE TYPOGRAPHY (type.less)
+// Headings
+// --------------------------------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+  line-height: @headings-line-height;
+  color: @headings-color;
+
+  small,
+  .small {
+    font-weight: normal;
+    line-height: 1;
+    color: @headings-small-color;
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: @line-height-computed;
+  margin-bottom: (@line-height-computed / 2);
+
+  small,
+  .small {
+    font-size: 65%;
+  }
+}
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: (@line-height-computed / 2);
+  margin-bottom: (@line-height-computed / 2);
+
+  small,
+  .small {
+    font-size: 75%;
+  }
+}
+
+h1, .h1 { font-size: @font-size-h1; }
+h2, .h2 { font-size: @font-size-h2; }
+h3, .h3 { font-size: @font-size-h3; }
+h4, .h4 { font-size: @font-size-h4; }
+h5, .h5 { font-size: @font-size-h5; }
+h6, .h6 { font-size: @font-size-h6; }
+
+
+// Body text
+// -------------------------
+::selection {
+  background: @brand-primary;
+  color: @white;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: @brand-primary;
+  color: @white;
+  text-shadow: none;
+}
+
+::-webkit-selection {
+  background: @brand-primary;
+  color: @white;
+  text-shadow: none;
+}
+
+// Paragraphs
+// ----------
+p {
+  margin: 0 0 (@line-height-computed / 2);
+}
+
+.lead {
+  margin-bottom: @line-height-computed;
+  font-size: floor((@font-size-base * 1.15));
+  font-weight: 200;
+  line-height: 1.4;
+
+  @media (min-width: @screen-sm-min) {
+    font-size: (@font-size-base * 1.5);
+  }
+}
+
+
+// Emphasis & misc
+// ---------------
+
+// Ex: 14px base font * 85% = about 12px
+small, .small   { font-size: 85%; }
+
+// Undo browser default styling
+cite    { font-style: normal; }
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+
+// Contextual colors
+.text-muted {
+  color: @text-muted;
+}
+.text-primary {
+  .text-emphasis-variant(@brand-primary);
+}
+.text-success {
+  .text-emphasis-variant(@state-success-text);
+}
+.text-info {
+  .text-emphasis-variant(@state-info-text);
+}
+.text-warning {
+  .text-emphasis-variant(@state-warning-text);
+}
+.text-danger {
+  .text-emphasis-variant(@state-danger-text);
+}
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-primary {
+  // Given the contrast here, this is the only class to have its color inverted
+  // automatically.
+  color: #fff;
+  .bg-variant(@brand-primary);
+}
+.bg-success {
+  .bg-variant(@state-success-bg);
+}
+.bg-info {
+  .bg-variant(@state-info-bg);
+}
+.bg-warning {
+  .bg-variant(@state-warning-bg);
+}
+.bg-danger {
+  .bg-variant(@state-danger-bg);
+}
+
+// Highlight
+.highlight {
+  background-color: #FFC;
+  font-weight: bold;
+  padding: 1px 4px;
+}
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding-bottom: ((@line-height-computed / 2) - 1);
+  margin: (@line-height-computed * 2) 0 @line-height-computed;
+  border-bottom: 1px solid @page-header-border-color;
+}
+
+
+// Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+// ----------------------------
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: (@line-height-computed / 2);
+  ul,
+  ol{
+    margin-bottom: 0;
+  }
+}
+
+// List options
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  .list-unstyled();
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// Description Lists
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: @line-height-computed;
+}
+
+dt,
+dd {
+  line-height: @line-height-base;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0; // Undo browser default
+}
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+@media (min-width: @grid-float-breakpoint) {
+  .dl-horizontal {
+    dt {
+      float: left;
+      width: (@component-offset-horizontal - 20);
+      clear: left;
+      text-align: right;
+      .text-overflow();
+    }
+    dd {
+      margin-left: @component-offset-horizontal;
+      &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
+    }
+  }
+}
+
+@media (min-width: @screen-xs-min) {
+  .login-form-module {
+    .dl-horizontal {
+      dt {
+        float: left;
+        width: (@component-offset-horizontal - 20);
+        clear: left;
+        text-align: right;
+        .text-overflow();
+      }
+      dd {
+        margin-left: @component-offset-horizontal;
+        &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
+      }
+    }
+  }
+}
+
+
+
+//
+// MISC
+// --------------------------------------------------
+
+// Color Swatches
+// ----------------
+.swatch-item {
+  width: 100%;
+  min-height: 100px;
+  position: relative;
+  background: @gray-darker;
+  color: @white;
+  margin-bottom: @t3-global-margin;
+
+  @media (min-width: @screen-lg) {
+    min-height: 123px;
+  }
+
+  dl {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    margin: 0;
+  }
+}
+
+// The colors
+.color-brand-primary {
+  background: @brand-primary;
+}
+.color-brand-secondary {
+  background: @brand-secondary;
+}
+.color-brand-success {
+  background: @brand-success;
+}
+.color-brand-danger {
+  background: @brand-danger;
+}
+.color-brand-warning {
+  background: @brand-warning;
+}
+.color-brand-info {
+  background: @brand-info;
+}
+// TGrayscale Levels
+.color-gray-darker {
+  background: @gray-darker;
+}
+.color-gray-dark {
+  background: @gray-dark;
+}
+.color-gray {
+  background: @gray;
+}
+.color-gray-light {
+  background: @gray-light;
+  color: @gray-dark;
+}
+.color-gray-lighter {
+  background: @gray-lighter;
+  color: @gray-dark;
+}
+.color-gray-lightest {
+  background: @gray-lightest;
+  color: @gray-dark;
+}
+
+
+// Abbreviations and acronyms
+// --------------------------
+abbr[title],
+// Added data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @abbr-border-color;
+}
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+
+// Blockquotes
+// -----------
+blockquote {
+  padding: (@line-height-computed / 2) @line-height-computed;
+  margin: 0 0 @line-height-computed;
+  font-size: @blockquote-font-size;
+  border-left: 5px solid @blockquote-border-color;
+
+  p,
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Note: Deprecated small and .small as of v3.1.0
+  // Context: https://github.com/twbs/bootstrap/issues/11660
+  footer,
+  small,
+  .small {
+    display: block;
+    font-size: 80%; // back to default font-size
+    line-height: @line-height-base;
+    color: @blockquote-small-color;
+
+    &:before {
+      content: '\2014 \00A0'; // em dash, nbsp
+    }
+  }
+}
+
+// Opposite alignment of blockquote
+//
+// Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid @blockquote-border-color;
+  border-left: 0;
+  text-align: right;
+
+  // Account for citation
+  footer,
+  small,
+  .small {
+    &:before { content: ''; }
+    &:after {
+      content: '\00A0 \2014'; // nbsp, em dash
+    }
+  }
+}
+
+// Quotes
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+// Addresses
+// ---------
+address {
+  margin-bottom: @line-height-computed;
+  font-style: normal;
+  line-height: @line-height-base;
+}
+
+
+
+//
+// CODE (inline and block) (code.less)
+// -----------------------------------
+// Inline and block code styles
+code,
+kbd,
+pre,
+samp {
+  font-family: @font-family-monospace;
+}
+
+// Inline code
+code {
+}
+
+// Blocks of code
+pre {
+}
+
+
+
+//
+// FEATURE LIST
+// --------------------------------------------------
+.btn-actions {
+  text-align: center;
+}
+
+.features-list {
+  margin-top: @t3-global-margin * 3;
+
+  .page-header {
+    border: 0;
+    text-align: center;
+
+    h1 {
+      font-size: @t3-font-size-bigger + 30;
+    }
+  }
+
+  /* Features Rows */
+  .feature-row {
+    overflow: hidden;
+    min-height: 200px;
+    color: #696f72;
+    border-top: 1px solid #e0e2e3;
+    padding: (@t3-global-padding * 3) 0 0;
+	text-align:center;
+
+    &:last-child {
+      border-bottom: 1px solid #e0e2e3;
+      margin-bottom: @t3-global-margin * 3;
+    }
+
+    h3 {
+      font-size: @font-size-base * 2;      
+    }
+
+    div:first-child {
+      padding-left: 0;
+    }
+
+    div:last-child {
+      padding-right: 0;
+    }
+
+    div:first-child.feature-img img {
+      float: left;
+    }
+
+    div:last-child.feature-img img {
+      float: right;
+    }
+  }
+}
+
+
+.jumbotron {
+  h2 {
+    font-size: @t3-font-size-bigger + 30;
+  }
+
+  iframe {
+    margin-top: @t3-global-margin;
+  }
+}
+
+
+
+// ISOTOPE LAYOUT
+// -------------------
+.ja-masonry-wrap {
+
+  .isotope-item {
+    float: left;
+    padding: 0 @grid-gutter-width/2;
+    margin-bottom: @grid-gutter-width;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .item-bg-dark {
+    .item-inner,
+    article {
+      background-color: @gray-dark;
+      color: @white;
+    }
+  }
+
+  .item-bg-highlight {
+    .item-inner,
+    article {
+      background-color: lighten(@brand-primary, 30%);
+    }
+  }
+
+  .badge.hot {
+    background-color: @red;
+    color: @white;
+  }
+
+  .badge.new {
+    background-color: @blue;
+    color: @white;
+  }
+
+  .grid-sizer {
+    margin-bottom: 0;
+  }
+
+  #es .es-mini-header {
+    border-color: @t3-border-color;
+
+    .o-nav--block {
+      white-space: normal;
+    }
+  }
+  
+  /* xxs */
+  .grid-xs-1 .isotope-item { width: 100%; }
+  .grid-xs-2 .isotope-item { width: 50%; }
+  .grid-xs-3 .isotope-item { width: 33.3%; }
+  .grid-xs-4 .isotope-item { width: 25%; }
+  .grid-xs-5 .isotope-item { width: 20%; }
+  .grid-xs-6 .isotope-item { width: 16.6%; }
+  .grid-xs-7 .isotope-item { width: 14.28%; }
+  .grid-xs-8 .isotope-item { width: 12.5%; }
+  .grid-xs-9 .isotope-item { width: 11.1%; }
+  .grid-xs-10 .isotope-item { width: 10%; }  
+
+  /* xs */
+  @media (min-width: 600px) {
+    .grid-smx-1 .isotope-item { width: 100%; }
+    .grid-smx-2 .isotope-item { 
+      width: 50%; 
+
+      &.item-2 {
+        width: 100%;
+      }
+
+      &.item-3 {
+        width: 100%;
+      }
+
+      &.item-4 {
+        width: 100%;
+      }
+    }
+    .grid-smx-3 .isotope-item { width: 33.3%; }
+    .grid-smx-4 .isotope-item { width: 25%; }
+    .grid-smx-5 .isotope-item { width: 20%; }
+    .grid-smx-6 .isotope-item { width: 16.6%; }
+    .grid-smx-7 .isotope-item { width: 14.28%; }
+    .grid-smx-8 .isotope-item { width: 12.5%; }
+    .grid-smx-9 .isotope-item { width: 11.1%; }
+    .grid-smx-10 .isotope-item { width: 10%; }
+  }
+
+  /* sm */
+  @media (min-width: @screen-sm-min) {
+    .grid-sm-1 .isotope-item { width: 100%; }
+    .grid-sm-2 .isotope-item { 
+      width: 49.9%; 
+
+      &.item-2 {
+        width: 100%;
+      }
+
+      &.item-3 {
+        width: 100%;
+      }
+
+      &.item-4 {
+        width: 100%;
+      }
+    }
+    .grid-sm-3 .isotope-item { width: 33.3%; }
+    .grid-sm-4 .isotope-item { width: 25%; }
+    .grid-sm-5 .isotope-item { width: 20%; }
+    .grid-sm-6 .isotope-item { width: 16.6%; }
+    .grid-sm-7 .isotope-item { width: 14.28%; }
+    .grid-sm-8 .isotope-item { width: 12.5%; }
+    .grid-sm-9 .isotope-item { width: 11.1%; }
+    .grid-sm-10 .isotope-item { width: 10%; }
+  }
+
+  /* md */
+  @media (min-width: @screen-md-min) {
+    .grid-md-1 .isotope-item { width: 100%; }
+    .grid-md-2 .isotope-item { width: 50%; }
+    .grid-md-3 .isotope-item { 
+      width: 33.3%; 
+
+      &.item-2 {
+        width: 66.6%;
+      }
+
+      &.item-3 {
+        width: 100%;
+      }
+
+      &.item-4 {
+        width: 100%;
+      }
+    }
+    .grid-md-4 .isotope-item { 
+      width: 25%; 
+
+      &.item-2 {
+        width: 50%;
+      }
+
+      &.item-3 {
+        width: 75%;
+      }
+
+      &.item-4 {
+        width: 100%;
+      }
+    }
+    .grid-md-5 .isotope-item { width: 20%; }
+    .grid-md-6 .isotope-item { width: 16.6%; }
+    .grid-md-7 .isotope-item { width: 14.28%; }
+    .grid-md-8 .isotope-item { width: 12.5%; }
+    .grid-md-9 .isotope-item { width: 11.1%; }
+    .grid-md-10 .isotope-item { width: 10%; }
+  }
+
+  /* lg */
+  @media (min-width: @screen-lg-min) {
+    .grid-lg-1 .isotope-item { width: 100%; }
+    .grid-lg-2 .isotope-item { width: 50%; }
+    .grid-lg-3 .isotope-item { width: 33.3%; }
+    .grid-lg-4 .isotope-item { 
+      width: 25%; 
+
+      &.item-2 {
+        width: 50%;
+      }
+
+      &.item-4 {
+        width: 100%;
+      }
+    }
+    .grid-lg-5 .isotope-item { 
+      width: 20%; 
+
+      &.item-2 {
+        width: 40%;
+      }
+
+      &.item-3 {
+        width: 60%;
+      }
+
+      &.item-5 {
+        width: 100%;
+      }
+    }
+    .grid-lg-6 .isotope-item { 
+      width: 16.6%; 
+
+      &.item-2 {
+        width: 33.2%;
+      }
+    }
+    .grid-lg-7 .isotope-item { width: 14.28%; }
+    .grid-lg-8 .isotope-item { width: 12.5%; }
+    .grid-lg-9 .isotope-item { width: 11.1%; }
+    .grid-lg-10 .isotope-item { width: 10%; }
+  }
+
+  // HD 
+  @media (min-width: 1600px) {
+    .grid-hd-1 .isotope-item { width: 100%; }
+    .grid-hd-2 .isotope-item { width: 50%; }
+    .grid-hd-3 .isotope-item { width: 33.3%; }
+    .grid-hd-4 .isotope-item { 
+      width: 25%; 
+
+      &.item-2 {
+        width: 50%;
+      }
+
+      &.item-4 {
+        width: 100%;
+      }
+    }
+    .grid-hd-5 .isotope-item { 
+      width: 20%; 
+
+      &.item-2 {
+        width: 40%;
+      }
+
+      &.item-3 {
+        width: 60%;
+      }
+
+      &.item-5 {
+        width: 100%;
+      }
+    }
+    .grid-hd-6 .isotope-item { 
+      width: 16.6%; 
+
+      &.item-2 {
+        width: 33.2%;
+      }
+    }
+    .grid-hd-7 .isotope-item { width: 14.28%; }
+    .grid-hd-8 .isotope-item { width: 12.5%; }
+    .grid-hd-9 .isotope-item { width: 11.1%; }
+    .grid-hd-10 .isotope-item { width: 10%; }
+  }
+}
+
+/* Fix for IE8 */
+html.ie8 .ja-masonry-wrap {
+  .isotope-item { margin-left: -0.5px; }
+}
+
+
+// ANIMATIONS
+// ---------------------------------
+@-webkit-keyframes movedown {
+  0%   { top: -300px; }
+  100% { top: @t3-header-height; }
+}
+
+@-moz-keyframes movedown {
+  0%   { top: -300px; }
+  100% { top: @t3-header-height; }
+}
+
+@-o-keyframes movedown {
+  0%   { top: -300px; }
+  100% { top: @t3-header-height; }
+}
+
+@keyframes movedown {
+  0%   { top: -300px; }
+  100% { top: @t3-header-height; }
+}

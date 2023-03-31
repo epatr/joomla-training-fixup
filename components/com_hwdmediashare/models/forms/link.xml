@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+        addfieldpath="/components/com_hwdmediashare/models/fields/"
+>
+	<fieldset 
+                name="details"
+                label="COM_HWDMS_DETAILS"
+        >
+                <field 
+                        name="category_id" 
+                        type="category"
+                        extension="com_hwdmediashare"
+                        action="true"
+                        label="COM_HWDMS_ADD_TO_CATEGORY_LABEL"
+                        description="COM_HWDMS_ADD_TO_CATEGORY_DESC"
+		>
+			<option value="">JOPTION_SELECT_CATEGORY</option>
+		</field>
+                <field 
+                        name="playlist_id" 
+                        type="playlist"
+                        label="COM_HWDMS_ADD_TO_PLAYLIST_LABEL"
+                        description="COM_HWDMS_ADD_TO_PLAYLIST_DESC"
+                />
+		<field
+                        name="album_id"
+                        type="album"
+                        label="COM_HWDMS_ADD_TO_ALBUM_LABEL"
+                        description="COM_HWDMS_ADD_TO_ALBUM_DESC"
+                />
+		<field
+                        name="group_id"
+                        type="group"
+                        label="COM_HWDMS_ADD_TO_GROUP_LABEL"
+                        description="COM_HWDMS_ADD_TO_GROUP_DESC"
+                />
+	</fieldset>
+</form>

@@ -1,0 +1,18 @@
+[07-Jan-2019 07:58:17 UTC] PHP Notice:  Undefined property: stdClass::$notifications in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 475
+[07-Jan-2019 07:58:17 UTC] PHP Notice:  Trying to get property of non-object in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 475
+[07-Jan-2019 07:58:17 UTC] PHP Notice:  Trying to get property of non-object in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 475
+[07-Jan-2019 07:58:17 UTC] PHP Notice:  Undefined property: stdClass::$notifications in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 513
+[07-Jan-2019 07:58:17 UTC] PHP Notice:  Trying to get property of non-object in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 513
+[07-Jan-2019 07:58:17 UTC] PHP Notice:  Trying to get property of non-object in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 513
+[07-Jan-2019 07:58:17 UTC] PHP Notice:  Undefined property: stdClass::$notifications in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 387
+[07-Jan-2019 07:58:17 UTC] PHP Notice:  Trying to get property of non-object in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 387
+[07-Jan-2019 07:58:17 UTC] PHP Notice:  Trying to get property of non-object in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 387
+[07-Jan-2019 07:58:21 UTC] PHP Notice:  Undefined property: stdClass::$notifications in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 475
+[07-Jan-2019 07:58:21 UTC] PHP Notice:  Trying to get property of non-object in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 475
+[07-Jan-2019 07:58:21 UTC] PHP Notice:  Trying to get property of non-object in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 475
+[07-Jan-2019 07:58:21 UTC] PHP Notice:  Undefined property: stdClass::$notifications in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 513
+[07-Jan-2019 07:58:21 UTC] PHP Notice:  Trying to get property of non-object in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 513
+[07-Jan-2019 07:58:21 UTC] PHP Notice:  Trying to get property of non-object in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 513
+[07-Jan-2019 07:58:21 UTC] PHP Notice:  Undefined property: stdClass::$notifications in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 387
+[07-Jan-2019 07:58:21 UTC] PHP Notice:  Trying to get property of non-object in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 387
+[07-Jan-2019 07:58:21 UTC] PHP Notice:  Trying to get property of non-object in /home/xh6crz3zglir/subdomains/training/components/com_easysocial/polling.php on line 387

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" type="plugin" group="system" method="upgrade" client="site">
+	<name>System - ARI Quiz Anywhere</name>
+	<creationDate>July 2017</creationDate>
+	<author>ARI Soft</author>
+	<copyright>ARI Soft</copyright>
+	<authorEmail>info@ari-soft.com</authorEmail>
+	<authorUrl>www.ari-soft.com</authorUrl>
+	<version>1.2.7</version>
+	<description>ARI_QUIZ_ANYWHERE_PLUGIN</description>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<files>
+		<filename plugin="ariquizanywhere">ariquizanywhere.php</filename>
+		<filename>ariquizanywhere.xml</filename>
+		<folder>ariquizanywhere/</folder>
+		<folder>help/</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/en-GB/en-GB.plg_system_ariquizanywhere.ini</language>
+		<language tag="en-GB">languages/en-GB/en-GB.plg_system_ariquizanywhere.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/system/ariquizanywhere/ariquizanywhere/fields">
+				<field name="loadJQuery" type="list" default="1" label="PLG_ARIQUIZANYWHERE_LABEL_JQUERYLOAD" description="PLG_ARIQUIZANYWHERE_DESCR_JQUERYLOAD">
+		  			<option value="0">PLG_ARIQUIZANYWHERE_LABEL_NO</option> 
+		  			<option value="1">PLG_ARIQUIZANYWHERE_LABEL_YES</option> 
+					<option value="2">PLG_ARIQUIZANYWHERE_LABEL_YES_GOOGLE_API</option> 
+		  		</field>
+				<field name="jQueryNoConflict" type="list" default="1" label="PLG_ARIQUIZANYWHERE_LABEL_JQUERYNOCONFLICT" description="PLG_ARIQUIZANYWHERE_DESCR_JQUERYNOCONFLICT">
+		  			<option value="0">PLG_ARIQUIZANYWHERE_LABEL_NO</option> 
+		  			<option value="1">PLG_ARIQUIZANYWHERE_LABEL_YES</option> 
+		  		</field>
+		  		<field name="scrolling" type="list" default="no" label="PLG_ARIQUIZANYWHERE_LABEL_SCROLLING" description="PLG_ARIQUIZANYWHERE_DESCR_SCROLLING">
+		  			<option value="auto">PLG_ARIQUIZANYWHERE_LABEL_AUTO</option> 
+		  			<option value="no">PLG_ARIQUIZANYWHERE_LABEL_NO</option> 
+		  			<option value="yes">PLG_ARIQUIZANYWHERE_LABEL_YES</option> 
+		  		</field>
+				<field name="removeTitle" type="list" default="0" label="PLG_ARIQUIZANYWHERE_LABEL_REMOVETITLE" description="PLG_ARIQUIZANYWHERE_DESCR_REMOVETITLE">
+					<option value="0">PLG_ARIQUIZANYWHERE_LABEL_NO</option>
+					<option value="1">PLG_ARIQUIZANYWHERE_LABEL_YES</option>
+				</field>
+		  		<field name="loadingMessage" type="text" default="Loading..." size="45" label="PLG_ARIQUIZANYWHERE_LABEL_LOADING" description="PLG_ARIQUIZANYWHERE_DESCR_LOADING" />
+		  		
+		  		<field type="modal" name="" label="" description="" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

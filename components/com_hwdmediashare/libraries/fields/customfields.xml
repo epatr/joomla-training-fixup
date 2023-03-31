@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hwdmediashare>
+	<fields>
+		<field>
+			<type>text</type>
+			<name>Text</name>
+		</field>
+		<field>
+			<type>textarea</type>
+			<name>Textarea</name>
+		</field>
+		<field>
+			<type>select</type>
+			<name>Select</name>
+		</field>		
+		<field>
+			<type>radio</type>
+			<name>Radio</name>
+		</field>
+		<field>
+			<type>checkbox</type>
+			<name>Checkbox</name>
+		</field>
+		<field>
+			<type>country</type>
+			<name>Country</name>
+		</field>
+		<field>
+			<type>email</type>
+			<name>Email</name>
+		</field>
+		<field>
+			<type>time</type>
+			<name>Time</name>
+		</field>
+		<field>
+			<type>date</type>
+			<name>Date</name>
+		</field>
+		<field>
+			<type>url</type>
+			<name>URL</name>
+		</field>
+	</fields>
+</hwdmediashare>

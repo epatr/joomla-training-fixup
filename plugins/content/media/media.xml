@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="content" version="3.0" method="upgrade">
+	<name>plg_content_media</name>
+	<author>HWD</author>
+	<creationDate>2016-04-21</creationDate>
+	<copyright>(C) 2014 Highwood Design Limited</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>info@hwdmediashare.co.uk</authorEmail>
+	<authorUrl>http://hwdmediashare.co.uk</authorUrl>
+	<version>2.0.5</version>  
+	<description>PLG_CONTENT_MEDIA_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="media">media.php</filename>
+		<filename>language/en-GB/en-GB.plg_content_media.sys.ini</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_media.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_media.sys.ini</language>
+	</languages>
+	<config>
+		<fields 
+                        name="params"
+                        addfieldpath="/administrator/components/com_hwdmediashare/models/fields/"
+                        addrulepath="/administrator/components/com_hwdmediashare/models/rules"     
+                >
+			<fieldset 
+                                name="basic"
+			>
+                                <field
+					name="layout"
+					type="list"
+					label="PLG_CONTENT_MEDIA_FIELD_LAYOUT_LABEL"
+					description="PLG_CONTENT_MEDIA_FIELD_LAYOUT_DESC"                                        
+					default="blog"
+                                >
+					<option value="blog">PLG_CONTENT_MEDIA_OPTION_BLOG</option>
+					<option value="details">PLG_CONTENT_MEDIA_OPTION_DETAILS</option>
+					<option value="details-lightbox">PLG_CONTENT_MEDIA_OPTION_DETAILS-LIGHTBOX</option>
+                                        <option value="documentation">PLG_CONTENT_MEDIA_OPTION_DOCUMENTATION</option>
+					<option value="solo">PLG_CONTENT_MEDIA_OPTION_SOLO</option>
+					<option value="thumbnail">PLG_CONTENT_MEDIA_OPTION_THUMBNAIL</option>
+					<option value="thumbnail-lightbox">PLG_CONTENT_MEDIA_OPTION_THUMBNAIL-LIGHTBOX</option>
+				</field>                             
+			</fieldset>
+		</fields>
+	</config>
+</extension>

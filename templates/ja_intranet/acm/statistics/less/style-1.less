@@ -1,0 +1,46 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+.acm-stats {
+
+	// Style 1
+	&.style-1 {
+		.stats-list {
+			.stats-asset {
+				.clearfix();
+				padding: 0;
+				margin-bottom: @grid-gutter-width * 2;
+			}
+
+			span {
+				display: block;
+
+				&.stats-item-counter {
+					color: @black;
+					padding: 0;
+					background-color: @gray-lighter;
+					border-radius: @border-radius-small;
+
+					.progressbar {
+						span {
+							background-color: @brand-primary;
+							color: @white;
+							font-size: @font-size-h6;
+							height: 8px;
+							border-radius: @border-radius-small;
+						}
+					}
+				}
+
+				&.stats-item-subject {
+					padding-left: 0;
+					margin-bottom: @t3-global-margin/2;
+					text-transform: uppercase;
+					font-size: @t3-font-size-small;
+					font-weight: @font-weight-normal;
+				}
+			}
+		}
+	}
+}

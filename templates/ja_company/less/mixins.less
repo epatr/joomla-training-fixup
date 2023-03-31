@@ -1,0 +1,59 @@
+/**
+ * $JA#COPYRIGHT$
+*/
+
+// Mixins
+// --------------------------------------------------
+
+// Background Linear
+.bg-linear(@brand-primary) {
+  background: linear-gradient(lighten(@brand-primary, 5%),@brand-primary);
+}
+
+.button-variant(@color; @background; @border) {
+  color: @color;
+  background: linear-gradient(lighten(@background, 5%),@background);
+  border: 0;
+  font-size: @font-size-h6;
+  font-family: @font-family-secondary;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @color;
+    background: darken(@background, 5%);
+    border-color: darken(@border, 12%);
+  }
+
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}
+
+
+

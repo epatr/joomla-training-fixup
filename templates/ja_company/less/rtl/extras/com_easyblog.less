@@ -1,0 +1,442 @@
+/**
+* $JA#COPYRIGHT$
+*/
+
+html.com_easyblog {
+  div#eb {
+    text-align: right;
+
+    // bootstrap
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, 
+    .col-md-5, .col-md-6, .col-md-7, .col-md-8, 
+    .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+      @media (min-width: @screen-md-min) {
+        float: right;
+      }
+    }
+
+    // horizontal
+    .form-horizontal .control-label {
+      @media (min-width: @screen-md-min) {
+        text-align: left;
+      }
+    }
+
+    // pull align
+    .pull-left {
+      float: right !important;
+    }
+
+    .pull-right {
+      float: left !important;
+    }
+
+    // navbar align
+    .eb-navbar-left {
+      float: right;
+    }
+
+    .eb-navbar-right {
+      float: left;
+    }
+
+    // text align
+    .text-left {
+      text-align: right;
+    }
+
+    .text-right {
+      text-align: left;
+    }
+
+    .float-list > li {
+      float: right;
+    }
+
+    // nav paging
+    .eb-entry-nav-next {
+      float: left;
+      text-align: left;
+      border-left: none;
+      border-right: 1px solid @navbar-default-toggle-border-color;
+
+      .fa {
+        margin: 0 10px 0 0;
+      }
+    }
+
+    .eb-entry-nav-prev {
+      float: right;
+      text-align: right;
+
+      .fa {
+        margin: 0 0 0 10px;
+      }
+    }
+
+    .mr-10 {
+      margin-left: 10px!important;
+      margin-right: 0!important;
+    }
+
+    .mr-15 {
+      margin-left: 15px !important;
+      margin-right: 0!important;
+    }
+
+    .ml-15 {
+      margin-right: 15px !important;
+      margin-left: 0 !important;
+    }
+
+    // checkbox & radio
+    .eb-checkbox, 
+    .eb-radio {
+      padding: 0 20px 0 0;
+      label {
+        padding-right: 5px;
+        &:before {
+          margin-right: -20px;
+          right: 0;
+          left: auto;
+        }
+      }
+    }
+
+    // toolbar
+    .eb-toolbar-dropdown {
+      min-width: 235px;
+    }
+
+    .eb-stats-author > a {
+      padding: 0 0 0 @t3-global-margin/2;
+    }
+
+    // tags
+    .eb-tags {
+      .cell-tags span a:before {
+        float: right;
+        margin-left: @t3-global-margin / 4;
+        margin-right: 0;
+      }
+    }
+
+    // eb tags filter
+    .eb-tags-filter {
+      .col-cell + .col-cell {
+        padding: 0 10px 0 0;
+      }
+    }
+
+    .eb-tags-finder {
+      .form-control {
+        padding-right: 40px;
+      }
+
+      .fa-tags {
+        right: 0;
+        left: auto;
+      }
+    }
+
+    // eb tags item
+    .eb-tags-item__icon {
+      float: right;
+    }
+
+    .eb-tags-item__link {
+      padding: 0 5px 0 0;
+      i {
+        float: left;
+      }
+    }
+
+    .eb-authors-finder {
+      .form-control {
+        padding-right: 40px;
+      }
+      .fa-user {
+        right: 0;
+        left: auto;
+      }
+    }
+
+    // btn group
+    .btn-group-yesno {
+      .btn {
+        float: right;
+
+        &:first-child {
+          border-radius: 0 3px 3px 0;
+        }
+
+        &:last-of-type {
+          border-radius: 3px 0 0 3px;
+        }
+      }
+    }
+
+    // media
+    .media {
+      > .pull-left {
+        margin-right: 0;
+      }
+      > .pull-right {
+        margin-left: 0;
+      }
+    }
+
+    // actions
+    .eb-quick-actions {
+      text-align: left;
+    }
+
+    // eb mod media thumb
+    .eb-mod-media-thumb {
+      float: right;
+      margin-left: @t3-global-margin/2;
+      margin-right: 0;
+    }
+
+    .eb-stats-nav {
+      > li:last-child:not(:first-child) > .btn {
+        border-radius: 3px 0 0 3px;
+      }
+      > li:first-child:not(:last-child):not(.dropdown-toggle_) > .btn {
+        border-radius: 0 3px 3px 0;
+      }
+    }
+
+    .input-group .form-control:last-child, 
+    .input-group-addon:last-child, 
+    .input-group-btn:last-child > .btn, 
+    .input-group-btn:last-child > .dropdown-toggle_, 
+    .input-group-btn:first-child > .btn:not(:first-child) {
+      border-radius: 3px 0 0 3px;
+    }
+
+    .input-group .form-control:first-child, 
+    .input-group-addon:first-child, 
+    .input-group-btn:first-child > .btn, 
+    .input-group-btn:first-child > .dropdown-toggle_, 
+    .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle_) {
+      border-radius: 0 3px 3px 0;
+    }
+
+
+    // entry author recents
+    .eb-entry-author-recents span {
+      padding-right: 0;
+      margin: 0 20px 0 0;
+
+      @media (min-width: @screen-sm-min) {
+        padding-left: 20%;
+      }
+    }
+
+    .eb-entry-author-avatar {
+      padding-right: 0;
+      padding-left: @t3-global-padding / 2;
+    }
+
+    .eb-composer-author .eb-avatar img {
+      margin-right: 0;
+      margin-left: @t3-global-margin / 4;
+    }
+
+    // Login
+    .eb-navbar-login .form-group > label > a {
+      float: left;
+    }
+
+    // Icon
+    .fa-chevron-right::before {
+      content: "\f053";
+    }
+
+    .fa-chevron-left::before {
+      content: "\f054";
+    }
+
+    .fa-angle-left:before {
+      content: "\f105";
+    }
+
+    .fa-angle-right:before {
+      content: "\f104";
+    }
+
+    .fa-fast-forward:before {
+      content: "\f049";
+    }
+
+    .fa-fast-backward:before {
+      content: "\f050";
+    }
+
+    .eb-showcase-title {
+      margin: 0 0 @t3-global-margin/2 @t3-global-margin*2;
+    }
+
+    .eb-showcase-control {
+      > .btn:first-child {
+        border-radius: 0 @border-radius-base @border-radius-base 0 !important;
+      }
+
+      > .btn:last-child {
+        border-radius: @border-radius-base 0 0 @border-radius-base !important;
+      }
+    }
+
+    // eb pager
+    .eb-pager .fa-chevron-right {
+      margin: 0 3px 0 0;
+    }
+
+    .eb-pager .fa-chevron-left {
+      margin: 0 0 0 3px;
+    }
+
+    .eb-pager__fast-last-link,
+    .eb-pager__next-link {
+      float: left;
+    }
+
+    .eb-pager__fast-last-link {
+      border-left: 0;
+      border-right: 1px solid @t3-border-color;
+    }
+
+    .eb-pager__fast-first-link, 
+    .eb-pager__pre-link {
+      float: right;
+    }
+
+    .eb-pager__fast-first-link {
+      border-right: 0;
+      border-left: 1px solid @t3-border-color;
+    }
+
+    // category profile
+    .eb-category-profile,
+    .eb-authors-head {
+      .col-cell + .col-cell {
+        @media (min-width: @screen-sm-min) {
+          padding: 0 @t3-global-padding 0 0;
+        }
+      }
+    }
+
+    // seperator
+    .spans-seperator > span {
+      float: right;
+
+      & + span {
+        @media (min-width: @screen-md-min) {
+          margin: 0 10px 0 0;
+          padding: 0 10px 0 0;
+          border-right: 1px solid @t3-border-color;
+          border-left: none;
+        }
+      }
+    }
+
+    .eb-category-subscribe > span + span {
+      border-left: none;
+    }
+
+    // eb rating
+    .eb-rating {
+      form > div {
+        float: right;
+      }
+    }
+
+    // eb post
+    .eb-post-meta {
+      > div {
+        margin: 0 0 0 15px;
+      }
+
+      .fa {
+        margin: 0 0 0 3px;
+      }
+    }
+
+    .eb-stats-posts {
+      > div i {
+        float: right;
+        margin: 0 0 0 15px;
+      }
+
+      > div time {
+        float: left;
+      }
+    }
+
+    .eb-post-foot {
+      > div + div {
+        padding: 0 15px 0 0;
+      }
+    }
+
+    .eb-post-comment .fa-comment-o {
+      float: right;
+      margin: 0 0 0 @t3-global-margin/2;
+    }
+
+    // eb showcase meta
+    .eb-showcase-meta {
+      > div {
+        margin: 0 0 0 @t3-global-margin/2;
+      }
+    }
+
+    // eb comment
+    .eb-comment {
+      .cell-avatar {
+        padding-left: 15px;
+        padding-right: 0;
+      }
+    }
+
+    // eb entry related
+    .eb-entry-related {
+      > div {
+        float: right;
+        &:nth-child(3n+1) {
+          clear: right;
+        }
+      }
+    }
+
+    .eb-entry-author-meta {
+      > span {
+        float: right;
+        & + span {
+          margin: 0 10px 0 0;
+          padding: 0 10px 0 0;
+          border-right: 1px solid @t3-border-color;
+          border-left: none;
+        }
+      }
+    }
+
+    .eb-post-headline {
+      border-right: 2px solid @gray-light-lv4;
+      border-left: none;
+      padding: 0 10px 0 0;
+    }
+
+    // Login Help
+    .eb-login-help {
+      > div {
+        padding: 0 0 0 4px;
+
+        & + div {
+          padding: 0 4px 0 0;
+        }
+      }
+    }
+  }
+}

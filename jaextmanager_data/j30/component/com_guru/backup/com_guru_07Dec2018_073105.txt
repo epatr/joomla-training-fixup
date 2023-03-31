@@ -1,0 +1,4 @@
+extKey=com_guru
+version=5.1.11
+createDate=2018-12-07 07:31:05
+comment=Upgrade to version 5.1.15 - Dated 12/7/2018, 1:01:21 PM

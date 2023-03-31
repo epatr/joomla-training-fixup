@@ -1,0 +1,28 @@
+TABLE.aq-mod-quiztopresult {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 100%;
+}
+
+TABLE.aq-mod-quiztopresult TH {
+	background-color: #C1E4FF;
+}
+
+TABLE.aq-mod-quiztopresult TD,
+TABLE.aq-mod-quiztopresult TH {
+	padding: 4px;
+	border: 1px solid white;
+}
+
+TABLE.aq-mod-quiztopresult TD.aq-point {
+	width: 1%;
+	white-space: nowrap;
+}
+
+TABLE.aq-mod-quiztopresult TR.current TD {
+	background: #E2E2E2;
+}
+
+TABLE.aq-mod-quiztopresult TR.current TD.aq-user {
+	font-weight: bold;
+}

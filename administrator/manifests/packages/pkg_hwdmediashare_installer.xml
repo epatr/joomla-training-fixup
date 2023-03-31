@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" version="3.2" method="upgrade">
+        <name>HWD MediaShare Installer</name>
+        <url>http://hwdmediashare.co.uk</url>
+        <packagename>hwdmediashare_installer</packagename>
+        <packager>HWD</packager>
+        <packagerurl>http://hwdmediashare.co.uk</packagerurl>
+	<creationDate>2016-04-21</creationDate>
+        <author>HWD</author>
+        <authorEmail>info@hwdmediashare.co.uk</authorEmail>
+        <authorUrl>http://hwdmediashare.co.uk</authorUrl>
+        <copyright>(C) 2014 Highwood Design Limited</copyright>
+        <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<version>2.0.5</version>
+        <description><![CDATA[
+<div class="alert alert-info">
+    <h1>HWD MediaShare Installer</h1>
+    <p>Thank you for installing the HWD MediaShare Installer. Please visit our website for more documentation and help.</p>
+    <p class="btn-group">
+            <a class="btn btn-large" href="index.php?option=com_hwdmediashare&view=dashboard">Dashboard</a>
+            <a class="btn btn-large" href="index.php?option=com_hwdmediashare&view=maintenance">Maintenance</a>
+            <a class="btn btn-large" href="http://hwdmediashare.co.uk/learn/" target="_blank">Documentation</a>
+    </p>            
+</div>
+        ]]></description>
+        <files folder="packages">
+                <file type="component" id="hwdmediashare">com_hwdmediashare.zip</file>
+                <file type="plugin" id="player_mejs" group="hwdmediashare">plg_hwdmediashare_player_mejs.zip</file>
+                <file type="plugin" id="media" group="search">plg_search_media.zip</file>
+        </files>
+        <updateservers>
+                <server type="collection" name="HWD Updates">https://bitbucket.org/hwdmediashare/updateserver/raw/master/update.xml</server>
+        </updateservers>     
+</extension>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_hwdmediashare/models/rules"
+>
+	<fieldset
+                name="details"
+                label="COM_HWDMS_DETAILS"
+        >
+		<field
+			name="id"
+			type="hidden"
+		/>
+                <field 
+                        name="asset_id" 
+                        type="hidden" 
+                        filter="unset" 
+                />
+                <field
+			name="element_type"
+			type="hidden"
+			label="COM_HWDMS_ELEMENT_LABEL"
+			description="COM_HWDMS_ELEMENT_DESC"
+			required="true"
+			default="5"
+                        validate="integer"
+                        filter="integer"                        
+                />
+                <field
+			name="element_id_5"
+			type="channel"
+			label="COM_HWDMS_CHANNEL_LABEL"
+			description="COM_HWDMS_CHANNEL_DESC"
+                        validate="integer"
+                        filter="integer"  
+		/>
+ 		<field
+                        name="user_id"
+                        type="user"
+			label="COM_HWDMS_SUBSCRIBER_LABEL"
+                        description="COM_HWDMS_SUBSCRIBER_DESC"
+			required="true"
+                />
+	</fieldset>
+</form>
+

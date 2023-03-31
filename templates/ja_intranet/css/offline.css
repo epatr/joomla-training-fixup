@@ -1,0 +1,103 @@
+/**
+ * @copyright	Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
+ * @license	GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+body.site {
+	margin: 0;
+	padding: 0;
+	background-color: #f4f5f6;
+	color: #646566;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 1.53846;
+}
+
+.outer {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.inner {
+	margin: 0 auto;
+	max-width: 30em;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 3px;
+	box-shadow: 0 1px 0 0 #d4d5d6;
+}
+
+.header {
+	text-align: center;
+	margin: 0 0 1em 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}
+
+form, fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+label {
+	display: block;
+	margin: 0;
+}
+
+input[type="text"], input[type="password"] {
+	box-sizing: border-box;
+	width: 100%;
+	height: auto;
+	background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #ebeef0;
+  border-radius: 3px;
+  color: #555;
+  display: block;
+  font-size: 13px;
+  height: 40px;
+  line-height: 1.53846;
+  padding: 6px 12px;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus {
+	border-color: #66afe9;
+}
+
+input {
+	margin: .5em 0 1em 0;
+}
+
+input.btn {
+	border-radius: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.53846;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  background-color: #4275f4;
+  border: 1px solid #2a63f3;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+input.btn:hover,
+input.btn:focus {
+	background-color: #1252f1;
+  border-color: #0c45d3;
+}

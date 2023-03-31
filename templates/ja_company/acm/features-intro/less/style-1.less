@@ -1,0 +1,112 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+
+// -------------------------------
+// STYLE FEATURE INTRO 1
+// -------------------------------
+.acm-features.style-1 {
+  img {
+    width: 100%;
+  }
+
+  // Module Title
+  .label-small {
+    margin-bottom: @t3-global-margin;
+  }
+  
+  // Feature Title
+  .features-intro {
+    padding-right: @grid-gutter-width;
+
+    // Mobile view
+    @media (max-width: @screen-xs-max) {
+      padding-right: 0;
+    }
+  }
+
+  .acm-features-title {
+    color: @gray-darker;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: @t3-global-margin;
+
+    // Mobile view
+    @media (max-width: @screen-xs-max) {
+      font-size: 22px;
+    }
+  }
+  
+  .features-content {
+    background: @white;
+    padding: @t3-global-padding;
+
+    h3 {
+      margin-top: 0;
+      line-height: 1.5;
+    }
+  }
+
+  // Carousel
+  .acm-feature-slide {
+    margin-left: -@grid-gutter-width / 2;
+    margin-right: -@grid-gutter-width / 2;
+
+    .owl-carousel {
+      padding: 0;
+    }
+  }
+
+  .owl-item {
+    padding: 0 @grid-gutter-width / 2;
+  }
+
+  // Feature content
+  .features-item-inner {
+    background: @white;
+
+    // Image
+    .features-img img{
+      border-radius: @border-radius-base;
+    }
+
+    // Title
+    h3 {
+      color: @brand-primary;
+      font-weight: 500;
+      margin-top: @t3-global-margin;
+      margin-bottom: @t3-global-margin;
+    }
+
+    // Link
+    .feature-action a {
+      border-bottom: 1px solid @brand-secondary;
+      font-size: @font-size-h5;
+
+      &:hover {
+        color: @brand-secondary;
+      }
+    }
+  }
+
+  // Control
+  .owl-controls {
+    bottom: 0;
+    left: -31.3333%;
+    position: absolute;
+    margin-bottom: @t3-global-margin;
+
+    // Medium Desktop
+    @media (max-width: @screen-md-max) {
+      left: -47.33333%;
+    }
+
+    // Tablet/mobile view
+    @media (max-width: @screen-sm-max) {
+      position: relative;
+      left: 0;
+      margin-top: @t3-global-margin;
+    }
+  }
+}

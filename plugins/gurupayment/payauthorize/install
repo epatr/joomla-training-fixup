@@ -1,0 +1,11 @@
+[general]
+type=payment
+name=authorizenet
+classname=authorizenet
+filename="authorizenet_payment.php"
+reqhttps=1
+
+[settings]
+authorizenet_login="API Login"
+authorizenet_key="API Key"
+authorizenet_secret="Secret word"

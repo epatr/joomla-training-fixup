@@ -1,0 +1,20 @@
+TABLE.aq-mod-quizusertopresult {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 100%;
+}
+
+TABLE.aq-mod-quizusertopresult TH {
+	background-color: #C1E4FF;
+}
+
+TABLE.aq-mod-quizusertopresult TD,
+TABLE.aq-mod-quizusertopresult TH {
+	padding: 4px;
+	border: 1px solid white;
+}
+
+TABLE.aq-mod-quizusertopresult TD.aq-point {
+	width: 1%;
+	white-space: nowrap;
+}

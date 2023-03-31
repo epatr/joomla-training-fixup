@@ -1,0 +1,227 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+
+// EXTEND STYLE IN BASE
+// --------------------
+@import "../../../plugins/system/t3/base-bs3/less/off-canvas.less";
+
+
+
+//
+// OFF-CANVAS
+// -------------------------------------
+
+// Toggle Button
+// -------------------
+.off-canvas-toggle {
+  border-radius: @border-radius-base;
+  border: 0;
+  padding: 0;
+  width: @navbar-height - @grid-gutter-width;
+  height: @navbar-height - @grid-gutter-width;
+  line-height: @navbar-height - @grid-gutter-width;
+  float: left;
+  margin-top: @grid-gutter-width / 2;
+  margin-left: @t3-global-margin / 2;
+  &:focus {
+    outline: none;
+  }
+}
+
+
+//
+// OFF-CANVAS CONTENT STYLES
+// -------------------------------------
+.t3-off-canvas {
+
+  // Generic
+  // -----------------------------------
+  background: @t3-off-canvas-background;
+  color: @t3-off-canvas-text-color;
+
+  // Header
+  // -----------------------------------
+  .t3-off-canvas-header {
+    background: @t3-off-canvas-header-background;
+    color: @t3-off-canvas-header-text-color;
+    padding: 0 0 0 @padding-base-horizontal;
+    height: @t3-global-padding * 2;
+
+    // Title
+    h2 {
+      margin: 0;
+      line-height: @t3-global-padding * 2;
+      font-size: @font-size-h6;
+      text-transform: uppercase;
+      color: @t3-off-canvas-header-text-color;
+      letter-spacing: 1px;
+    }
+
+  }
+
+  // Close Button
+  .close {
+    color: @white;
+    margin: 0;
+    height: @t3-global-padding * 2;
+    line-height: @t3-global-padding * 2;
+    font-weight: 300;
+    width: @t3-global-padding * 2;
+    background: darken(@t3-off-canvas-header-background, 2%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    .opacity(1);
+  }
+
+
+  // Body
+  // -----------------------------------
+  .t3-off-canvas-body {
+    font-size: @font-size-h6;
+    padding: (@padding-base-vertical * 2)  @padding-base-horizontal;
+
+    // Links
+    // ------------
+    a {
+      color: @t3-off-canvas-link-color;
+      font-size: @font-size-h6;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: @t3-off-canvas-link-hover-color;
+        text-decoration: none;
+      }
+
+      &:focus {
+        .tab-focus();
+      }
+    }
+
+    .dropdown-menu .active > a {
+      background: transparent;
+      color: @t3-off-canvas-link-hover-color;
+    }
+
+
+    // Navigations
+    // ------------
+    .nav {
+      > li {
+        margin: 0;
+
+        > a,
+        > span {
+          border: 0;
+          display: block;
+          padding: 8px 0;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 11px;
+
+          &:hover, &:active, &:focus {
+            background: transparent;
+
+            &:before {
+              margin-right: 8px;
+              transition: 0.2s;
+            }
+          }
+
+          .caret {
+            display: none;
+          }
+        }
+
+        &.dropdown {
+          > a,
+          > span {
+            &:before {
+              content: "\f0da";
+              font-family: "FontAwesome";
+              margin-right: 5px;
+              transition: 0.2s;
+              font-weight: @font-weight-normal;
+              font-size: @font-size-h6;
+              float: right;
+            }
+          }
+        }
+
+        &.active {
+          > a,
+          > span {
+            background: transparent;
+            border: 0;
+            color: @t3-off-canvas-link-hover-color;
+          }
+        }
+      }
+    }
+
+    // Dropdown Menu
+    .dropdown-menu {
+      background: transparent;
+      padding-left: @t3-global-padding/2;
+
+      > li {
+        margin: 0;
+
+        > a,
+        > span {
+          font-size: @font-size-small;
+          font-weight: @font-weight-normal;
+          padding: 8px 0;
+          text-transform: none;
+          display: block;
+
+          &:hover, &:active, &:focus {
+            background: transparent;
+
+            &:before {
+              margin-right: 8px;
+              transition: 0.2s;
+            }
+          }
+        }
+      }
+    }
+
+
+    // Modules
+    // ------------
+    .t3-module {
+      margin-bottom: @grid-gutter-width;
+      color: @t3-off-canvas-text-color;
+
+      .module-inner {
+        background: none;
+        padding: 0;
+      }
+    }
+
+    .module-title  {
+      margin: 0 0 @t3-global-margin/2;
+      padding-bottom: @t3-global-padding/2;
+      position: relative;
+      font-size: @font-size-small;
+      font-weight: 900;
+      border-bottom: 2px solid @gray-dark;
+    }
+
+  // End Off-Canvas Body
+  }
+
+// End Off-Canvas Content Styles
+}

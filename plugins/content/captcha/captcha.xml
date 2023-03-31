@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" method="upgrade" group="content">
+    <name>Content - CAPTCHA</name>
+    <version>2.5.6</version>
+    <description>Provides CAPTCHA support for any component</description>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>Douglas Machado</author>
+    <authoremail>support@fok.com.br</authoremail>
+    <authorurl>http://ideal.fok.com.br</authorurl>
+    <copyright>(C) 2009 ideal.fok.com.br - Brazil</copyright>
+    <creationDate>Dec 2018</creationDate>
+    <files folder="site">
+        <folder>captcha_systems</folder>
+        <filename plugin="captcha">captcha.php</filename>
+    </files>
+    <administration>
+        <files folder="admin">
+            <folder>language</folder>
+        </files>
+        <languages folder="admin/language">
+            <language tag="en-GB">en-GB/en-GB.plg_content_captcha.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_content_captcha.sys.ini</language>
+        </languages>
+    </administration>
+	<config>
+		<fields name="params" type="paramsField" size="5" default="" label="paramsField" description="paramsField" addfieldpath="/plugins/content/captcha/captcha_systems/elements">
+			<fieldset name="basic">
+				<field 
+					name="group1" 
+					type="jadepend"
+					function="@group">
+						<option for="captcha_systems" value="securImage2" hideRow="true">
+							captcha_systems-securImage2-width,captcha_systems-securImage2-height,captcha_systems-securImage2-length,captcha_systems-securImage2-perturbation,captcha_systems-securImage2-text_angle_minimum,captcha_systems-securImage2-text_angle_maximum,captcha_systems-securImage2-line_color,captcha_systems-securImage2-text_color,captcha_systems-securImage2-image_signature,captcha_systems-securImage2-signature_color,captcha_systems-securImage2-bg_color,captcha_systems-securImage2-number_lines
+						</option>
+						<option for="captcha_systems" value="recaptcha" hideRow="true">	captcha_systems-recaptcha-PubKey,captcha_systems-recaptcha-PriKey
+						</option>
+				</field>
+				<field 
+					name="captcha_systems" 
+					type="list" 
+					default="mathguard" 
+					label="Choose CAPTCHA System" 
+					description="SecurImage requires GD image Library, ReCaptcha requires an API (free) and MathGuard is very simple and Will protect against most spam bots ">
+					<option value="secureimage">SecureImage</option>
+					<option value="securImage2">SecureImage 2</option>
+					<option value="recaptcha">ReCAPTCHA v2</option>
+					<option value="invisible">Invisible</option>
+					<option value="mathguard">MathGuard - Simple and fast</option>
+				</field>
+				<field 
+					name="captcha_systems-recaptcha-PubKey" 
+					type="text" 
+					showon="captcha_systems:recaptcha"
+					default="" 
+					label="Site key" 
+					description="Site key" />
+				<field 
+					name="captcha_systems-recaptcha-PriKey" 
+					type="text" 
+					showon="captcha_systems:recaptcha"
+					default="" 
+					label="Secret key" 
+					description="Secret key" />
+
+				<field 
+					name="captcha_systems-invisible-PubKey" 
+					type="text" 
+					showon="captcha_systems:invisible"
+					default="" 
+					label="Site key" 
+					description="Site key" />
+				<field 
+					name="captcha_systems-invisible-PriKey" 
+					type="text" 
+					showon="captcha_systems:invisible"
+					default="" 
+					label="Secret key" 
+					description="Secret key" />
+
+				<field 
+					name="captcha_systems-securImage2-width" 
+					type="text" 
+					default="140" 
+					label="Image width" 
+					description="The desired width of the CAPTCHA image. Only numbers" />
+				<field 
+					name="captcha_systems-securImage2-height" 
+					type="text" 
+					default="60" 
+					label="Image height" 
+					description="The desired height of the CAPTCHA image. Only numbers" />
+				<field 
+					name="captcha_systems-securImage2-length" 
+					type="list" 
+					default="4" 
+					label="Length" 
+					description="The length of the code to generate.">
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</field>
+				<field 
+					name="captcha_systems-securImage2-perturbation" 
+					type="list" 
+					default="0.7" 
+					label="Perturbation"
+					description="How much to distort image, higher = more distortion. Distortion is only available when using TTF fonts">
+					<option value="0.1">1</option>
+					<option value="0.2">2</option>
+					<option value="0.3">3</option>
+					<option value="0.4">4</option>
+					<option value="0.5">5</option>
+					<option value="0.6">6</option>
+					<option value="0.7">7</option>
+					<option value="0.8">8</option>
+					<option value="0.9">9</option>
+					<option value="1">10</option>
+				</field>
+				<field 
+					name="captcha_systems-securImage2-text_angle_minimum" 
+					type="list" 
+					default="0" 
+					label="Minimum Angle" 
+					description="The minimum angle in degrees, with 0 degrees being left-to-right reading text.         *Higher values represent a counter-clockwise rotation.         *For example, a value of 90 would result in bottom-to-top reading text.         *This value along with maximum angle distance do not need to be very high with perturbation">
+					<option value="-90">-90</option>
+					<option value="-80">-80</option>
+					<option value="-70">-70</option>
+					<option value="-60">-60</option>
+					<option value="-50">-50</option>
+					<option value="-40">-40</option>
+					<option value="-30">-30</option>
+					<option value="-20">-20</option>
+					<option value="-10">-10</option>
+					<option value="0">0</option>
+					<option value="10">10</option>
+					<option value="20">20</option>
+					<option value="30">30</option>
+					<option value="40">40</option>
+					<option value="50">50</option>
+					<option value="06">60</option>
+					<option value="70">70</option>
+					<option value="80">80</option>
+					<option value="90">90</option>
+				</field>
+				<field 
+					name="captcha_systems-securImage2-text_angle_maximum" 
+					type="list" 
+					default="0" 
+					label="Maximum Angle" 
+					description="The maximum angle in degrees, with 0 degrees being left-to-right reading text.         *Higher values represent a counter-clockwise rotation.         *For example, a value of 90 would result in bottom-to-top reading text.">
+					<option value="-90">-90</option>
+					<option value="-80">-80</option>
+					<option value="-70">-70</option>
+					<option value="-60">-60</option>
+					<option value="-50">-50</option>
+					<option value="-40">-40</option>
+					<option value="-30">-30</option>
+					<option value="-20">-20</option>
+					<option value="-10">-10</option>
+					<option value="0">0</option>
+					<option value="10">10</option>
+					<option value="20">20</option>
+					<option value="30">30</option>
+					<option value="40">40</option>
+					<option value="50">50</option>
+					<option value="06">60</option>
+					<option value="70">70</option>
+					<option value="80">80</option>
+					<option value="90">90</option>
+				</field>
+				<field 
+					class="color" 
+					name="captcha_systems-securImage2-text_color" 
+					type="text" 
+					default="3D3D3D" 
+					label="Text Color" 
+					description="The text color to use for drawing characters as a Securimage_Color.         *Make sure this contrasts well with the background color or image" />
+				<field 
+					name="captcha_systems-securImage2-number_lines" 
+					type="list" 
+					default="8" 
+					label="Number of lines" 
+					description="Draw vertical and horizontal lines on the image">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+				</field>
+				<field 
+					class="color" 
+					name="captcha_systems-securImage2-line_color" 
+					type="jacolorpicker" 
+					default="7C7C7C" 
+					label="Line Color" 
+					description="Color of lines drawn over text" />
+				<field 
+					name="captcha_systems-securImage2-image_signature" 
+					type="text" 
+					default="" 
+					label="Signature over image" 
+					description="Text to write at the bottom corner of captcha image" />
+				<field 
+					class="color" 
+					name="captcha_systems-securImage2-signature_color" 
+					type="jacolorpicker" 
+					default="FFFFFF" 
+					label="Text Color" 
+					description="Color to use for writing signature text" />
+				<field 
+					class="color" 
+					name="captcha_systems-securImage2-bg_color" 
+					type="jacolorpicker" 
+					default="FFFFFF" 
+					label="Background Color" 
+					description="The background color for the image as a Securimage_Color" />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension">http://update.joomlart.com/service/tracking/j16/plg_multiple_captcha_engine.xml</server>
+	</updateservers>
+</extension>

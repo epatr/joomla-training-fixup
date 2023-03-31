@@ -1,0 +1,13 @@
+HTML BODY {
+	width: 100%;
+	min-width: 0;
+	padding: 0;
+}
+
+BODY DIV#rt-main-surround {
+	height: 100%;
+}
+
+BODY DIV#rt-main-surround DIV.rt-container {
+	width: auto !important;
+}

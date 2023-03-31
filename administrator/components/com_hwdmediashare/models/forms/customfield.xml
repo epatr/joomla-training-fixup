@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_hwdmediashare/models/rules"
+>
+	<fieldset
+                name="details"
+                label="COM_HWDMS_DETAILS"
+        >
+		<field
+			name="id"
+			type="hidden"
+		/>
+                <field
+			name="element_type"
+			type="element"
+			label="COM_HWDMS_ELEMENT_LABEL"
+			description="COM_HWDMS_ELEMENT_DESC"
+			default="1"
+                        validate="integer"
+                        filter="integer"                        
+                >                      
+                </field>
+                <field
+			name="name"
+			type="text"
+			label="COM_HWDMS_TITLE_LABEL"
+			description="COM_HWDMS_TITLE_DESC"
+			class="input-xxlarge input-large-text"
+			required="true"
+		/>
+                <field
+                        name="type"
+			type="field"
+                        label="COM_HWDMS_FIELD_TYPE_LABEL"
+                        description="COM_HWDMS_FIELD_TYPE_DESC"
+                >
+                        <option value="group">COM_HWDMS_FIELD_TYPE_GROUP</option>
+                </field>
+                <field
+			name="fieldcode"
+			type="text"
+			label="COM_HWDMS_FIELD_CODE_LABEL"
+			description="COM_HWDMS_FIELD_CODE_DESC"
+		/>
+                <field
+			name="published"
+			type="radio"
+			label="COM_HWDMS_PUBLISHED_LABEL"
+			description="COM_HWDMS_PUBLISHED_DESC"
+			class="btn-group btn-group-yesno"
+			default="1"
+			validate="integer"
+                        filter="integer"  
+                >
+                        <option value="1">JYES</option>
+                        <option value="0">JNO</option>
+                </field>
+                <field
+			name="searchable"
+			type="radio"
+			label="COM_HWDMS_SEARCHABLE_LABEL"
+			description="COM_HWDMS_SEARCHABLE_DESC"
+			class="btn-group btn-group-yesno"
+			default="1"
+			validate="integer"
+                        filter="integer"  
+                >
+                        <option value="1">JYES</option>
+                        <option value="0">JNO</option>
+                </field>
+                <field
+			name="visible"
+			type="radio"
+			label="COM_HWDMS_VISIBLE_LABEL"
+			description="COM_HWDMS_VISIBLE_DESC"
+			class="btn-group btn-group-yesno"
+			default="1"
+			validate="integer"
+                        filter="integer"  
+                >
+                        <option value="1">JYES</option>
+                        <option value="0">JNO</option>
+                </field>
+                <field
+			name="required"
+			type="radio"
+			label="COM_HWDMS_REQUIRED_LABEL"
+			description="COM_HWDMS_REQUIRED_DESC"
+			class="btn-group btn-group-yesno"
+			default="1"
+			validate="integer"
+                        filter="integer"  
+                >
+                        <option value="1">JYES</option>
+                        <option value="0">JNO</option>
+                </field>
+                <field
+			name="tooltip"
+			type="textarea"
+			label="COM_HWDMS_TOOLTIP_LABEL"
+			description="COM_HWDMS_TOOLTIP_DESC"
+                        filter="string"
+                        cols="55"
+                        rows="3" 
+		/>
+                <field
+			name="options"
+			type="textarea"
+			label="COM_HWDMS_FIELD_OPTIONS_LABEL"
+			description="COM_HWDMS_FIELD_OPTIONS_DESC"
+                        filter="string"
+                        cols="55"
+                        rows="3" 
+		/>
+	</fieldset>
+</form>
+
+
+

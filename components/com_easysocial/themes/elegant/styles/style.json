@@ -1,0 +1,40 @@
+{
+	"style": [
+		"generic",
+		"objects",
+
+		"elements",
+		"layout",
+		"component",
+
+		"styleguide",
+		"blocks",
+		"hints",
+		"conversations",
+		"notifications",
+		"toolbar",
+
+		"profile",
+		
+		"apps",
+		"registration",
+		"create",
+		"logs",
+		"medias",
+		"photos",
+		"albums",
+
+		"story",
+		"stream",
+
+		"search",
+		"modules",
+		"videos",
+		"audios",
+		"markitup",
+
+		"states",
+		"trumps",
+		"custom"
+	]
+}

@@ -1,0 +1,32 @@
+IFRAME.aq-ic
+{
+	display: block;
+	visibility: visible;
+	width: 100%;
+}
+
+DIV.aq-ic-wrapper
+{
+	position: relative;
+}
+
+DIV.aq-ic-loading IFRAME.aq-ic
+{
+	visibility: hidden;
+}
+
+DIV.aq-ic-loading-message
+{
+	background-color: #FF0000;
+	color: #FFF;
+	padding: 3px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: none;
+}
+
+DIV.aq-ic-loading DIV.aq-ic-loading-message
+{
+	display: block;
+}

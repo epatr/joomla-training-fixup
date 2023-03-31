@@ -1,0 +1,68 @@
+/**
+* $JA#COPYRIGHT$
+*/
+
+html div#fd.es {
+  .es-toolbar .label.label-notification {
+    right: auto !important;
+  }
+
+  &.mod-es-menu .es-notification .es-menu-item > a .badge {
+    right: auto !important;
+  }
+
+  &.popbox div.arrow.arrow::after {
+    left: auto;
+  }
+
+  .es-widget .es-widget-tab > li + li {
+    padding: 0 8px 0 0;
+  }
+
+  // videos
+  &.view-videos {
+    .es-video-list .es-video-featured-label > span {
+      transform: rotate(45deg) !important;
+    }
+  }
+}
+
+.notification > div {
+  float: right;
+}
+
+// Fixed for Chosen
+.chzn-container-single {
+  .chzn-single {
+    & + .chzn-drop {
+      display: none;
+
+      .chzn-search {
+        display: none;
+      }
+    }
+
+    &.chzn-single-with-drop + .chzn-drop {
+      display: block;
+      right: auto;
+    }
+  }
+}
+
+div#es {
+  .fa-chevron-right:before {
+    content: "\f053";
+  }
+
+  .fa-chevron-left:before {
+    content: "\f054";
+  }
+
+  .es-widget-calendar table {
+    direction: rtl;
+  }
+
+  .es-stream-content-avatar {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,7 @@
+.acm-alert {
+  margin-bottom: 0 !important;
+}
+.acm-alert .alert {
+  margin-bottom: 20px;
+  border: 0;
+}

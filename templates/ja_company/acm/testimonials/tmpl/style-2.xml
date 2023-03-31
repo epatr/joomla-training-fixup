@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Testimonial Style 2</title>
+	<fields name="feature">
+	  <fieldset name="basic" label="TESTIMONIAL_BASIC_LABEL" description="TESTIMONIAL_BASIC_DESC" multiple="0"> 		
+			<field name="item-align" type="list" default="col-xs-12 col-md-6 pull-left"
+				 global="1"
+				 label="TESTIMONIAL_ITEM_ALIGN_LABEL"
+				 description="TESTIMONIAL_ITEM_ALIGN_DESC">
+				<option value="col-xs-12 col-md-6 pull-left">Left</option>
+				<option value="col-xs-12 col-md-6 pull-right">Right</option>
+				<option value="col-xs-12">Center</option>
+			</field>
+			
+	    <field name="img" type="media" default="" label="TESTIMONIAL_IMG_BACKGROUND_LABEL" description="TESTIMONIAL_IMG_BACKGROUND_DESC" />
+	    <field name="desc" type="textarea" default="" label="TESTIMONIAL_DESCIPTION_LABEL" description="TESTIMONIAL_DESCIPTION_DESC" />
+	    <field name="image-author" type="media" default="" label="TESTIMONIAL_IMAGE_AUTHOR_LABEL" description="TESTIMONIAL_IMAGE_AUTHOR_DESC" />
+	    <field name="name-author" type="text" default="" label="TESTIMONIAL_NAME_AUTHOR_LABEL" description="TESTIMONIAL_NAME_AUTHOR_DESC" />
+	    <field name="position-author" type="text" default="" label="TESTIMONIAL_POSITION_AUTHOR_LABEL" description="TESTIMONIAL_POSITION_AUTHOR_DESC" />
+	  </fieldset>  
+         
+  </fields>
+</form>

@@ -1,0 +1,99 @@
+.acm-accordion {
+  text-align: left;
+}
+.acm-accordion.panel-group .panel {
+  border: 0;
+  background: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.acm-accordion.panel-group .panel + .panel {
+  margin-top: 12px;
+}
+.acm-accordion .panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  border-radius: 0 0 2px 2px;
+  color: #666666;
+  padding: 24px;
+}
+.acm-accordion .panel-title {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.acm-accordion .panel-title a {
+  background: #ffffff;
+  color: #4197ff;
+  border: 1px solid #eeeeee;
+  border-radius: 2px 2px 0 0;
+  display: block;
+  font-weight: 400;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 50px;
+  text-indent: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.acm-accordion .panel-title a.collapsed {
+  background: #fbfbfb;
+  color: #aaaaaa;
+  border-radius: 2px;
+}
+.acm-accordion .panel-title a.collapsed:hover {
+  color: #1a2534;
+}
+.acm-accordion .panel-title a.collapsed:hover .fa {
+  background: #1a2534;
+}
+.acm-accordion .panel-title a:focus,
+.acm-accordion .panel-title a:hover,
+.acm-accordion .panel-title a:focus {
+  outline: none;
+  text-decoration: none;
+}
+.acm-accordion .panel-title .marker {
+  background: transparent;
+  color: #9e9e9e;
+  height: 50px;
+  font-size: 14px;
+  line-height: 50px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-indent: 0;
+  width: 50px;
+}
+.acm-accordion .panel-title .marker .fa {
+  background: #dddddd;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 7px;
+  text-align: center;
+  line-height: 13px;
+  height: 12px;
+  width: 12px;
+}
+.acm-accordion .panel-title .marker-close {
+  display: none;
+}
+.acm-accordion .panel-title .marker-open {
+  display: inline-block;
+}
+.acm-accordion .panel-title .marker-open .fa {
+  background: #4197ff;
+}
+.acm-accordion .panel-title .collapsed .marker-close {
+  display: inline-block;
+}
+.acm-accordion .panel-title .collapsed .marker-open {
+  display: none;
+}
+.acm-accordion .panel-heading {
+  padding: 0;
+}

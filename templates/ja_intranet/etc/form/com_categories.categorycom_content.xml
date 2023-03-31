@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<form>
+    <fields name="params">
+        <fieldset name="t3_extrafields_params">
+            <field name="category_class" type="list"
+                description="TPL_CATEGORY_CLASS_DESC"
+                label="TPL_CATEGORY_CLASS_LABEL"
+                default="fa-file-text" >
+                <option value="fa-file-text">Default</option>
+                <option value="fa-facebook">Facebook</option>
+                <option value="fa-vimeo">Vimeo</option>
+                <option value="fa-twitter">Twitter</option>
+                <option value="fa-instagram">Instagram</option>
+                <option value="fa-pinterest">Pinterest</option>
+                <option value="fa-flickr">Flickr</option>
+                <option value="fa-rss">RSS</option>
+                <option value="fa-youtube">Youtube</option>
+            </field> 
+        </fieldset>
+    </fields>
+</form>

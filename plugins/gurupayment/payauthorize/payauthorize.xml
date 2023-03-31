@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.7" group="gurupayment" method="upgrade">
+	<name>Payment Processor [AuthorizeNet]</name>
+	<license>Commercial</license>
+	<author><![CDATA[<a href='http://www.ielxis.com' target='_new'><img border=0 src='/plugins/payment/authorize.files/listimage.png' alt='How long will it take for others to copy our briliant ideas?' title='How long will it take for others to copy our briliant ideas?' /> <a/>]]></author>
+	<authorEmail>rfq@osdcs.com</authorEmail>
+	<authorUrl><![CDATA[<img src='plugins/payment/authorize.files/favicon.png' /> ]]>http://www.ielxis.com</authorUrl>
+	<creationDate>November 25, 2011</creationDate>
+	<copyright>OSDCS.COM</copyright>
+	<version>2.0.0</version>
+	<description><![CDATA[ 
+        Authorize.net Configuration Instruction. Install plugin. Edit plugin and enter your login, key, any secret word and currency. You can use test mode (test account needed).
+  ]]></description>
+	<files>
+		<filename plugin="payauthorize">payauthorize.php</filename>
+		<filename>authorize.files/ball_green.gif</filename>
+		<filename>authorize.files/ball_red.gif</filename>
+		<filename>payauthorize.gif</filename>
+		<filename>authorize.files/listimage.png</filename>
+		<filename>authorize.files/favicon.png</filename>
+		<filename>authorize.files/language.php</filename>
+		<filename>authorize.files/index.html</filename>
+		<filename>license.txt</filename>
+		<filename>install</filename>
+	</files>
+	
+	<config>	
+		<fields name="params">
+			<fieldset name="basic">		
+				<field name="payauthorize_label" size="50" type="text" default="Authorize.net" label="Label" description="Label to use in Frontend Payment processor list" />
+				<field name="payauthorize_image" type="imagelist" directory="/plugins/gurupayment/" hide_default="1" default="payauthorize.gif" label="Image" description="Payment system logo" />
+				<field name="payauthorize_login" type="text" default="" label="Login" />
+				<field name="payauthorize_key" type="text" default="" label="Key" />
+				<field name="payauthorize_secret" type="text" default="" label="Any secret word" />
+				<field name="payauthorize_currency" type="list" default="USD" label="Transaction currency" description="">
+					<option value="USD">US Dollars (USD)</option>
+				</field>
+		
+				<field name="payauthorize_test" type="radio" default="0" label="Test mode" description="">
+					<option value="2">Test</option>	
+					<option value="1">Dev</option>
+					<option value="0">Live</option>
+				</field>
+				<field name="payauthorize_street" type="radio" default="0" label="Request Street" description="User must enter street address">
+					<option value="0">No</option>	
+					<option value="1">Yes</option>
+					<option value="2">Yes and Required Field</option>
+				</field>
+				<field name="payauthorize_company" type="radio" default="0" label="Request Company" description="User can enter company name">
+					<option value="0">No</option>	
+					<option value="1">Yes</option>
+				</field>
+				<field name="payauthorize_city" type="radio" default="0" label="Request City" description="User can enter their city">
+					<option value="0">No</option>	
+					<option value="1">Yes</option>
+				</field>
+				<field name="payauthorize_state" type="radio" default="0" label="Request State" description="User can enter their state">
+					<option value="0">No</option>	
+					<option value="1">Yes</option>
+				</field>
+				<field name="payauthorize_country" type="radio" default="0" label="Request Country" description="User can enter country">
+					<option value="0">No</option>	
+					<option value="1">Yes</option>
+				</field>
+				<field name="payauthorize_phone" type="radio" default="0" label="Request Phone No." description="User can enter their phone number">
+					<option value="0">No</option>	
+					<option value="1">Yes</option>
+				</field>
+				<field name="payauthorize_fax" type="radio" default="0" label="Request Fax" description="User can enter their fax number">
+					<option value="0">No</option>	
+					<option value="1">Yes</option>
+				</field>
+		
+				<field name="payauthorize_zip" type="radio" default="0" label="Request zip/postal code" description="User must enter zip/postal code">
+					<option value="0">No</option>	
+					<option value="1">Yes</option>
+					<option value="2">Yes and Required Field</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

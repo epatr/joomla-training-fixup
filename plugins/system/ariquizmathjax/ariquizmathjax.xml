@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" type="plugin" group="system" method="upgrade" client="site">
+	<name>System - ARI Quiz MathJax</name>
+	<creationDate>April 2016</creationDate>
+	<author>ARI Soft</author>
+	<copyright>ARI Soft</copyright>
+	<authorEmail>info@ari-soft.com</authorEmail>
+	<authorUrl>www.ari-soft.com</authorUrl>
+	<version>1.0.2</version>
+	<description>ARI_QUIZ_MATHJAX_PLUGIN</description>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<files>
+		<filename plugin="ariquizmathjax">ariquizmathjax.php</filename>
+		<filename>ariquizmathjax.xml</filename>
+		<folder>ariquizmathjax/</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/en-GB/en-GB.plg_system_ariquizmathjax.ini</language>
+		<language tag="en-GB">languages/en-GB/en-GB.plg_system_ariquizmathjax.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="list" name="loadScript" default="1" label="PLG_ARIQUIZMATHJAX_LABEL_LOADSCRIPT" description="PLG_ARIQUIZMATHJAX_DESCR_LOADSCRIPT">
+				        <option value="0">PLG_ARIQUIZMATHJAX_LABEL_NO</option>
+				        <option value="1">PLG_ARIQUIZMATHJAX_LABEL_YES</option>
+				</field>
+				<field type="text" size="60" name="scriptUrl" default="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" label="PLG_ARIQUIZMATHJAX_LABEL_SCRIPTURL" description="PLG_ARIQUIZMATHJAX_DESCR_SCRIPTURL" />
+				<field type="text" size="60" name="secureScriptUrl" default="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" label="PLG_ARIQUIZMATHJAX_LABEL_SECURESCRIPTURL" description="PLG_ARIQUIZMATHJAX_DESCR_SECURESCRIPTURL" />
+				<field type="list" name="useSecure" default="auto" label="PLG_ARIQUIZMATHJAX_LABEL_USESECURE" description="PLG_ARIQUIZMATHJAX_DESCR_USESECURE">
+					<option value="always">PLG_ARIQUIZMATHJAX_LABEL_ALWAYS</option>
+					<option value="auto">PLG_ARIQUIZMATHJAX_LABEL_AUTO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

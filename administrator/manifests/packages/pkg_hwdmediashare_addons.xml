@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" version="3.2" method="upgrade">
+        <name>HWD MediaShare Addons</name>
+        <url>http://hwdmediashare.co.uk</url>
+        <packagename>hwdmediashare_addons</packagename>
+        <packager>HWD</packager>
+        <packagerurl>http://hwdmediashare.co.uk</packagerurl>
+	<creationDate>2016-04-21</creationDate>
+        <author>HWD</author>
+        <authorEmail>info@hwdmediashare.co.uk</authorEmail>
+        <authorUrl>http://hwdmediashare.co.uk</authorUrl>
+        <copyright>(C) 2014 Highwood Design Limited</copyright>
+        <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<version>2.0.5</version>
+        <description><![CDATA[
+<div class="alert alert-info">
+    <h1>HWD MediaShare Addon Pack</h1>
+    <p>Thank you for installing the HWD MediaShare Addon Pack. Please visit our website for more documentation and help.</p>
+</div>
+        ]]></description>
+        <files folder="packages">
+                <file type="module" id="mod_media_activities" client="site">mod_media_activities.zip</file>
+                <file type="module" id="mod_media_albums" client="site">mod_media_albums.zip</file>
+                <file type="module" id="mod_media_audio" client="site">mod_media_audio.zip</file>
+                <file type="module" id="mod_media_categories" client="site">mod_media_categories.zip</file>
+                <file type="module" id="mod_media_channels" client="site">mod_media_channels.zip</file>
+                <file type="module" id="mod_media_groups" client="site">mod_media_groups.zip</file>
+                <file type="module" id="mod_media_images" client="site">mod_media_images.zip</file>
+                <file type="module" id="mod_media_item" client="site">mod_media_item.zip</file>
+                <file type="module" id="mod_media_media" client="site">mod_media_media.zip</file>
+                <file type="module" id="mod_media_playlists" client="site">mod_media_playlists.zip</file>
+                <file type="module" id="mod_media_search" client="site">mod_media_search.zip</file>
+                <file type="module" id="mod_media_videos" client="site">mod_media_videos.zip</file>
+                <file type="plugin" id="media" group="community">plg_community_media.zip</file>
+                <file type="plugin" id="media" group="content">plg_content_media.zip</file>
+                <file type="plugin" id="media" group="editors-xtd">plg_editors-xtd_media.zip</file>
+                <file type="plugin" id="cdn_amazons3" group="hwdmediashare">plg_hwdmediashare_cdn_amazons3.zip</file>
+                <file type="plugin" id="comments_disqus" group="hwdmediashare">plg_hwdmediashare_comments_disqus.zip</file>
+                <file type="plugin" id="comments_facebook" group="hwdmediashare">plg_hwdmediashare_comments_facebook.zip</file>
+                <file type="plugin" id="comments_jcomments" group="hwdmediashare">plg_hwdmediashare_comments_jcomments.zip</file>
+                <file type="plugin" id="comments_komento" group="hwdmediashare">plg_hwdmediashare_comments_komento.zip</file>
+                <file type="plugin" id="event_social" group="hwdmediashare">plg_hwdmediashare_event_social.zip</file>
+                <file type="plugin" id="player_flowplayer" group="hwdmediashare">plg_hwdmediashare_player_flowplayer.zip</file>
+                <file type="plugin" id="player_jwadvanced" group="hwdmediashare">plg_hwdmediashare_player_jwadvanced.zip</file>
+                <file type="plugin" id="player_jwplayer" group="hwdmediashare">plg_hwdmediashare_player_jwplayer.zip</file>
+                <file type="plugin" id="player_mejs" group="hwdmediashare">plg_hwdmediashare_player_mejs.zip</file>
+                <file type="plugin" id="remote_bliptv" group="hwdmediashare">plg_hwdmediashare_remote_bliptv.zip</file>
+                <file type="plugin" id="remote_dailymotioncom" group="hwdmediashare">plg_hwdmediashare_remote_dailymotioncom.zip</file>
+                <file type="plugin" id="remote_flickrcom" group="hwdmediashare">plg_hwdmediashare_remote_flickrcom.zip</file>
+                <file type="plugin" id="remote_metacafecom" group="hwdmediashare">plg_hwdmediashare_remote_metacafecom.zip</file>
+                <file type="plugin" id="remote_myspacecom" group="hwdmediashare">plg_hwdmediashare_remote_myspacecom.zip</file>
+                <file type="plugin" id="remote_screenyahoocom" group="hwdmediashare">plg_hwdmediashare_remote_screenyahoocom.zip</file>
+                <file type="plugin" id="remote_soundcloudcom" group="hwdmediashare">plg_hwdmediashare_remote_soundcloudcom.zip</file>
+                <file type="plugin" id="remote_extremecom" group="hwdmediashare">plg_hwdmediashare_remote_extremecom.zip</file>
+                <file type="plugin" id="remote_veohcom" group="hwdmediashare">plg_hwdmediashare_remote_veohcom.zip</file>
+                <file type="plugin" id="remote_vevocom" group="hwdmediashare">plg_hwdmediashare_remote_vevocom.zip</file>
+                <file type="plugin" id="remote_videofoxnewscom" group="hwdmediashare">plg_hwdmediashare_remote_videofoxnewscom.zip</file>
+                <file type="plugin" id="remote_vimeocom" group="hwdmediashare">plg_hwdmediashare_remote_vimeocom.zip</file>
+                <file type="plugin" id="remote_vineco" group="hwdmediashare">plg_hwdmediashare_remote_vineco.zip</file>
+                <file type="plugin" id="remote_vyoukucom" group="hwdmediashare">plg_hwdmediashare_remote_vyoukucom.zip</file>
+                <file type="plugin" id="remote_wattv" group="hwdmediashare">plg_hwdmediashare_remote_wattv.zip</file>
+                <file type="plugin" id="remote_youtube" group="hwdmediashare">plg_hwdmediashare_remote_youtube.zip</file>
+                <file type="plugin" id="remote_youtubecom" group="hwdmediashare">plg_hwdmediashare_remote_youtubecom.zip</file>
+                <file type="plugin" id="media" group="search">plg_search_media.zip</file>
+                <file type="plugin" id="mediaredirect" group="system">plg_system_mediaredirect.zip</file>
+                <file type="plugin" id="com_hwdmediashare" group="xmap">plg_xmap_com_hwdmediashare.zip</file>
+        </files>
+        <updateservers>
+                <server type="collection" name="HWD Updates">https://bitbucket.org/hwdmediashare/updateserver/raw/master/update.xml</server>
+        </updateservers>         
+</extension>

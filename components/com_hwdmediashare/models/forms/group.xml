@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+        addfieldpath="/administrator/components/com_hwdmediashare/models/fields/"
+        addrulepath="/administrator/components/com_hwdmediashare/models/rules"  
+>
+	<fieldset 
+                name="details"
+                label="COM_HWDMS_DETAILS"
+        >
+		<field
+			name="id"
+			type="hidden"
+		/>
+                <field 
+                        name="asset_id" 
+                        type="hidden" 
+                        filter="unset" 
+                />
+                <field
+			name="title"
+			type="text"
+			label="COM_HWDMS_TITLE_LABEL"
+			description="COM_HWDMS_TITLE_DESC"
+			required="true"
+			hint="COM_HWDMS_TITLE_LABEL"
+                        class="input-large-text hwd-form-title span12"                        
+		/>
+                <field
+			name="alias"
+			type="text"
+			label="COM_HWDMS_ALIAS_LABEL"
+			description="COM_HWDMS_ALIAS_DESC"
+		/>
+		<field 
+                        name="description" 
+                        type="hwdeditor" 
+			label="COM_HWDMS_DESCRIPTION_LABEL" 
+                        description="COM_HWDMS_DESCRIPTION_DESC"
+			filter="safehtml" 
+                        buttons="true"
+                />
+                <field
+			name="tags"
+			type="tag"
+			label="COM_HWDMS_TAGS_LABEL"
+			description="COM_HWDMS_TAGS_DESC"
+                        multiple="true"
+                        class="hwd-form-tags span12"                        
+		/>
+		<field 
+                        name="featured" 
+                        type="radio"
+			label="JFEATURED"
+			description="COM_HWDMS_FEATURED_DESC"
+                        class="btn-group btn-group-yesno"
+			default="0"
+                        validate="integer"
+                        filter="integer"
+		>
+			<option value="1">COM_HWDMS_OPTION_FEATURED</option>
+			<option value="0">COM_HWDMS_OPTION_UNFEATURED</option>
+		</field>                
+		<field 
+                        name="status" 
+                        type="radio"
+			label="JSTATUS"
+			description="COM_HWDMS_STATUS_DESC"
+                        class="btn-group btn-group-yesno"
+			default="1"
+                        validate="integer"
+                        filter="integer"
+		>
+			<option value="1">COM_HWDMS_APPROVED</option>
+			<option value="0">COM_HWDMS_UNAPPROVED</option>
+		</field>
+		<field 
+                        name="published" 
+                        type="radio"
+                        label="JPUBLISHED"
+			description="JFIELD_PUBLISHED_DESC" 
+                        class="btn-group btn-group-yesno"
+			default="1"
+                        validate="integer"
+                        filter="integer"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field 
+                        name="access" 
+                        type="accesslevel" 
+                        label="COM_HWDMS_VIEWING_ACCESS_LABEL"
+			description="COM_HWDMS_VIEWING_ACCESS_DESC"
+			default="1"
+                        validate="integer"
+                        filter="integer"
+                />
+                <field
+			name="private"
+                        type="list" 
+			label="COM_HWDMS_PRIVATE_LABEL"
+			description="COM_HWDMS_PRIVATE_DESC"
+                        class="hwd-form-private span12"
+			default="0"
+                        validate="integer"
+                        filter="integer"
+		>
+			<option value="1">COM_HWDMS_OPTION_UNLISTED</option>
+			<option value="0">COM_HWDMS_OPTION_LISTED</option>
+		</field> 
+		<field 
+                        name="language" 
+                        type="contentlanguage" 
+                        label="COM_HWDMS_LANGUAGE_LABEL"
+			description="COM_HWDMS_LANGUAGE_DESC" 
+                        class="inputbox"
+		>
+			<option value="*">JALL</option>
+		</field>                               
+		<field 
+                        name="publish_up" 
+                        type="calendar"
+			label="COM_HWDMS_PUBLISH_UP_LABEL" 
+                        description="COM_HWDMS_PUBLISH_UP_DESC"
+                        format="%Y-%m-%d %H:%M:%S" 
+                        size="22"
+			filter="user_utc" 
+                />
+		<field 
+                        name="publish_down" 
+                        type="calendar"
+			label="COM_HWDMS_PUBLISH_DOWN_LABEL" 
+                        description="COM_HWDMS_PUBLISH_DOWN_DESC"
+                        format="%Y-%m-%d %H:%M:%S" 
+                        size="22"
+			filter="user_utc" 
+                />
+ 		<field
+                        name="thumbnail"
+                        type="file"
+			label="COM_HWDMS_NEW_THUMBNAIL_LABEL"
+                        description="COM_HWDMS_NEW_THUMBNAIL_DESC"
+                />
+		<field 
+                        name="remove_thumbnail" 
+                        type="radio"
+			label="COM_HWDMS_REMOVE_CURRENT_THUMBNAIL_LABEL"
+			description="COM_HWDMS_REMOVE_CURRENT_THUMBNAIL_DESC"
+                        class="btn-group btn-group-yesno"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>                 
+ 	</fieldset>
+        <fields name="params">
+                <fieldset
+                        name="metadata"
+                        label="COM_HWDMS_METADATA"
+                >
+                        <field
+                                name="meta_desc"
+                                type="textarea"
+                                label="COM_HWDMS_METADESC_LABEL"
+                                description="COM_HWDMS_METADESC_DESC"
+                                filter="string"
+                                cols="55"
+                                rows="4" 
+                                class="span10"                          
+                        />
+                        <field
+                                name="meta_keys"
+                                type="textarea"
+                                label="COM_HWDMS_METAKEYS_LABEL"
+                                description="COM_HWDMS_METAKEYS_DESC"
+                                filter="string"
+                                cols="55"
+                                rows="4"
+                                class="span10"                        
+                        />
+                </fieldset>
+	</fields>
+</form>

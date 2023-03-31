@@ -1,0 +1,4 @@
+extKey=ja_company
+version=1.0.4
+createDate=2018-12-07 07:29:40
+comment=Upgrade to version 1.0.5 - Dated 12/7/2018, 1:00:01 PM

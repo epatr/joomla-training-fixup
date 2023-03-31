@@ -1,0 +1,74 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// FEATURES INTRO
+// ------------------------------------
+.acm-features {
+  .features-item {
+    .clearfix();
+  }
+
+  // Set max width image
+  img {
+    max-width: 100%;
+  }
+
+  .features-item-inner {
+    // Title Items
+    h4 {
+      color: @gray-light;
+      margin-top: o;
+    }
+  }
+
+  // Control
+  .owl-controls .owl-buttons > div {
+    background: @gray-light-max;
+    border-radius: @border-radius-base;
+    color: @gray-light-lv1;
+    margin: 0;
+    line-height: @t3-global-padding * 2;
+    padding: 0;
+    text-align: center;
+    height: @t3-global-padding * 2;
+    width: @t3-global-padding * 2;
+    .opacity(1);
+
+    + div {
+      margin-left: @t3-global-margin / 2;
+    }
+
+    .fa {
+      color: @gray-light-lv1;
+      font-size: @font-size-h3;
+
+      &.fa-angle-left {
+        text-indent: -1px;
+      }
+
+      &.fa-angle-right {
+        text-indent: 3px;
+      }
+    }
+
+    &:hover {
+     .bg-linear(@brand-secondary);
+      color: @white;
+
+      .fa {
+        color: @white;
+      }
+    }
+  }
+}
+
+// Import style
+@import "style-1.less";
+@import "style-2.less";
+

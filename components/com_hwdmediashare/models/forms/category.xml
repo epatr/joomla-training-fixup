@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+        addfieldpath="/administrator/components/com_hwdmediashare/models/fields/"
+        addrulepath="/administrator/components/com_hwdmediashare/models/rules"  
+>
+	<fieldset 
+                name="details"
+                label="COM_HWDMS_DETAILS"
+        >
+		<field
+			name="id"
+			type="hidden"
+		/>
+                <field 
+                        name="asset_id" 
+                        type="hidden" 
+                        filter="unset" 
+                />
+                <field
+			name="title"
+			type="text"
+			label="COM_HWDMS_TITLE_LABEL"
+			description="COM_HWDMS_TITLE_DESC"
+			required="true"
+			hint="COM_HWDMS_TITLE_LABEL"
+                        class="input-large-text hwd-form-title span12"  
+		/>
+                <field
+			name="alias"
+			type="text"
+			label="COM_HWDMS_ALIAS_LABEL"
+			description="COM_HWDMS_ALIAS_DESC"
+		/>
+		<field 
+                        name="description" 
+                        type="hwdeditor" 
+			label="COM_HWDMS_DESCRIPTION_LABEL" 
+                        description="COM_HWDMS_DESCRIPTION_DESC"
+			filter="safehtml" 
+                        buttons="true"
+                />
+                <field
+			name="tags"
+			type="tag"
+			label="COM_HWDMS_TAGS_LABEL"
+			description="COM_HWDMS_TAGS_DESC"
+                        multiple="true"
+                        class="hwd-form-tags span12"                        
+		/>
+		<field 
+                        name="published" 
+                        type="radio"
+                        label="JPUBLISHED"
+			description="JFIELD_PUBLISHED_DESC" 
+                        class="btn-group btn-group-yesno"
+			default="1"
+                        validate="integer"
+                        filter="integer"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field 
+                        name="access" 
+                        type="accesslevel" 
+                        label="COM_HWDMS_VIEWING_ACCESS_LABEL"
+			description="COM_HWDMS_VIEWING_ACCESS_DESC" 
+			default="1"
+                        validate="integer"
+                        filter="integer"
+                />
+		<field 
+                        name="language" 
+                        type="contentlanguage" 
+                        label="COM_HWDMS_LANGUAGE_LABEL"
+			description="COM_HWDMS_LANGUAGE_DESC" 
+                        class="inputbox"
+		>
+			<option value="*">JALL</option>
+		</field>   
+                <field 
+                        name="metadesc" 
+                        type="textarea"
+                        label="COM_HWDMS_METADESC_LABEL"
+                        description="COM_HWDMS_METADESC_DESC"
+                        filter="string"
+                        cols="55"
+                        rows="4"
+                        class="span10"  
+                />
+                <field 
+                        name="metakey" 
+                        type="textarea"
+                        label="COM_HWDMS_METAKEYS_LABEL"
+                        description="COM_HWDMS_METAKEYS_DESC"
+                        filter="string"
+                        cols="55"
+                        rows="4"
+                        class="span10"    
+                />
+ 	</fieldset>
+</form>

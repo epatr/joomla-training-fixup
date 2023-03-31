@@ -1,0 +1,62 @@
+// ------------------------------------
+// FEATURES INTRO STYLE 10
+// ------------------------------------
+.acm-features {
+	&.style-2 {
+    margin-bottom: @grid-gutter-width;
+
+    .row {
+      margin: 0;
+
+      > div {
+        padding: 0;
+
+        &.features-item {
+          padding: @grid-gutter-width * 3 @grid-gutter-width * 3.5;
+
+          // Tablet view
+          @media (max-width: @screen-md-max) {
+            padding: @grid-gutter-width * 2 @grid-gutter-width * 2;
+          }
+          // Mobile view
+          @media (max-width: @screen-xs-max) {
+            padding: @grid-gutter-width;
+          }
+        }
+      }
+    }
+
+    // Content
+    .features-content {
+      background: @white;
+
+      // Label
+      .label-small {
+        margin-bottom: @grid-gutter-width / 2;
+      }
+
+      // Title
+      h2 {
+        color: @gray-darker;
+        margin-top: 0;
+        margin-bottom: @t3-global-margin;
+
+        a {
+          color: @gray-darker;
+
+          &:hover,&:focus,&:active {
+            color: @brand-primary;
+          }
+        }
+      }
+
+      // Button
+      .btn {
+        box-shadow: 8px 0 16px rgba(0,0,0,0.1);
+        margin-top: @t3-global-margin;
+      }
+    }
+  }
+}
+
+

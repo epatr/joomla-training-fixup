@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" type="plugin" group="system" method="upgrade">
+	<name>Events Booking - Reminder</name>
+	<author>Tuan Pham Ngoc</author>
+	<creationDate>Feb 2012</creationDate>
+	<copyright>Copyright (C) 2010 - 2018 Ossolution Team. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>tuanpn@joomdonation.com</authorEmail>
+	<authorUrl>www.joomdonation.com</authorUrl>
+	<version>3.5.3</version>
+	<description>This plugin is used to send reminder emails to registrants of your events</description>
+	<files>
+		<filename plugin="ebreminder">ebreminder.php</filename>		
+	</files>	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="last_run" label="Last Run Time" type="text" readonly="true" size="30" description="Store Last Run Time of the plugin"></field>
+				<field name="number_registrants" label="Number Registrants" type="text" size="30" default="15" description="Number of registrants which we will send reminder each time the plugin run"></field>
+				<field
+						name="send_to_group_billing"
+						type="radio"
+						label="Send to group billing"
+						description="If set to Yes, the group billing person of group registration will receive reminder emails"
+						class="btn-group btn-group-yesno"
+						default="1"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+						name="send_to_group_members"
+						type="radio"
+						label="Send to group members"
+						description="If set to Yes, group members of a group registration will receive reminder emails"
+						class="btn-group btn-group-yesno"
+						default="1"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+						name="send_to_unpublished_events"
+						type="radio"
+						label="Send to unpublished events"
+						description="If set to Yes, reminder emails will be sent to registrants of unpublish events"
+						class="btn-group btn-group-yesno"
+						default="0"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+                <field name="bcc_email" label="BCC Email" type="text" size="30" default="" description="If you want to receive a copy of reminder email so that you can keep track of reminder, enter the email you want here"></field>
+			</fieldset>
+		</fields>
+	</config>	
+</extension>
