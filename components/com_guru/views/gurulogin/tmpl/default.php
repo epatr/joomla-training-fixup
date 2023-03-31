@@ -156,7 +156,7 @@ else{
                     <p>
                       <?php echo JText::_("GURU_REGISTRATION_EASY_STUDENT"); ?>
                     </p>
-                    <a href="http://training.inspectiondepot.co/index.php/registration" class="btn btn-success" role="button">Register</a>
+                    <a href="https://inspectiondepot.net/index.php/registration" class="btn btn-success" role="button">Register</a>
                    <!-- <input type="submit" class="uk-button uk-button-primary" value="<?php echo JText::_("GURU_REGISTER_AS_STUDENT");?>" /> -->
                    <!-- end of student registration -->
                   </form>

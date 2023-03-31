@@ -64,16 +64,16 @@ defined('_JEXEC') or die('Unauthorized Access');
 	<div class="dropdown">
   <button class="dropbtn">Education</button>
   <div class="dropdown-content">
-    <a href="http://training.inspectiondepot.co/educations/test/gurupcategs/view">List of Courses</a>
-    <a href="http://training.inspectiondepot.co/educations/guruorders/mycourses">My Courses</a>
-    <a href="http://training.inspectiondepot.co/educations/guruorders/myorders">My Orders</a>
-    <a href="http://training.inspectiondepot.co/index.php/educations/drone-test">Drone Test</a>
-    <a href="http://training.inspectiondepot.co/index.php?option=com_content&view=article&id=3">Home Inspection Exam</a>
-    <a href="http://training.inspectiondepot.co/index.php?option=com_content&view=article&id=4">CIOP Recertification Exam</a>
-    <a href="http://training.inspectiondepot.co/videos">Course Videos</a>
-    <a href="http://training.inspectiondepot.co/educations/guruorders/myquizandfexam">My Exams</a>
-    <a href="http://training.inspectiondepot.co/educations/guruorders/mycertificates">My Certificates</a>
-    <a href="http://training.inspectiondepot.co/index.php?option=com_content&view=article&id=5">Paperless Inspectors</a>
+    <a href="https://inspectiondepot.net/educations/test/gurupcategs/view">List of Courses</a>
+    <a href="https://inspectiondepot.net/educations/guruorders/mycourses">My Courses</a>
+    <a href="https://inspectiondepot.net/educations/guruorders/myorders">My Orders</a>
+    <a href="https://inspectiondepot.net/index.php/educations/drone-test">Drone Test</a>
+    <a href="https://inspectiondepot.net/index.php?option=com_content&view=article&id=3">Home Inspection Exam</a>
+    <a href="https://inspectiondepot.net/index.php?option=com_content&view=article&id=4">CIOP Recertification Exam</a>
+    <a href="https://inspectiondepot.net/videos">Course Videos</a>
+    <a href="https://inspectiondepot.net/educations/guruorders/myquizandfexam">My Exams</a>
+    <a href="https://inspectiondepot.net/educations/guruorders/mycertificates">My Certificates</a>
+    <a href="https://inspectiondepot.net/index.php?option=com_content&view=article&id=5">Paperless Inspectors</a>
   </div>
 </div>
 
@@ -102,7 +102,7 @@ defined('_JEXEC') or die('Unauthorized Access');
 				<?php } ?>
 
 				<div class="o-nav__item <?php echo $highlight == 'profile' ? 'is-active' : '';?>">
-						<a href="http://training.inspectiondepot.co/index.php/events" class="o-nav__link es-toolbar__link">
+						<a href="https://inspectiondepot.net/index.php/events" class="o-nav__link es-toolbar__link">
 							<i class="fa fa-pencil-square-o t-sm-visible"></i>
 							<span><?php echo JText::_('Event '); ?></span>
 						</a>
